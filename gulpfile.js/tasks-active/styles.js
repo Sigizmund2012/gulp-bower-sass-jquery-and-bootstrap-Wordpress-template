@@ -1,11 +1,13 @@
 // ==== STYLES ==== //
 
-var gulp          = require('gulp')
-  , gutil         = require('gulp-util')
-  , plugins       = require('gulp-load-plugins')({ camelize: true })
-  , config        = require('../../gulpconfig').styles
-  , autoprefixer  = require('autoprefixer-core')
+var gulp          = require('gulp'), 
+    gutil         = require('gulp-util'), 
+    plugins       = require('gulp-load-plugins')({ camelize: true }), 
+    config        = require('../../gulpconfig').styles, 
+    autoprefixer  = require('autoprefixer-core'),
+    replace = require('gulp-replace')
 ;
+
 
 // Build stylesheets from source Sass files, autoprefix, and make a minified copy (for debugging) with rubySass
 gulp.task('styles-ruby-sass', function() {
