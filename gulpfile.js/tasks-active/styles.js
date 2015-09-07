@@ -4,7 +4,7 @@ var gulp          = require('gulp'),
     gutil         = require('gulp-util'), 
     plugins       = require('gulp-load-plugins')({ camelize: true }), 
     config        = require('../../gulpconfig').styles, 
-    autoprefixer  = require('autoprefixer-core'),
+    autoprefixer  = require('autoprefixer'),
     replace = require('gulp-replace')
 ;
 

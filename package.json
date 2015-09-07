@@ -38,7 +38,7 @@
     "gulp-livereload": "^3.8.0",
     "gulp-load-plugins": "^1.0.0-rc",
     "gulp-minify-css": "^1.2.1",
-    "gulp-postcss": "^5.1.10",
+    "gulp-postcss": "^6.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-ruby-sass": "^1.4.0",
@@ -48,5 +48,8 @@
     "gulp-util": "^3.0.6",
     "merge-stream": "^1.0.0",
     "require-dir": "^0.3.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.0.1"
   }
 }
