@@ -1,6 +1,6 @@
 // ==== КОНФИГУРАЦИЯ ==== //
 
-// Папки проекта
+// Папки проекта. Предполагается, что папка с Gulp содержится в папке wp-content
 var project     = 'smart', 
     src         = './src/', 
     build       = '../themes/build' + project + '/', 
@@ -18,7 +18,7 @@ module.exports = {
       dest: src+'scss', 
       rename: '_normalize.scss'
     },
-    bootstrap: { // Копирует папку `fonts` из `bower_components` в `build`
+    bootstrap: { // Копирует папку `bootstrap-sass/assets/fonts/` из `bower_components` в `build`
       src: bower + 'bootstrap-sass/assets/fonts/**/*', 
       dest: build + 'fonts/' 
     }

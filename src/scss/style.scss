@@ -1,15 +1,15 @@
-// ==== STYLES ==== //
+// ==== СТИЛИ ==== //
 
-// Do not declare anything before the metadata block; this first section is solely for variable, function, and mixin definitions
-// Note: `bower_components` is already in Sass's path
+// Не пишите стилей до блока с метаданными, эта начальная секция лишь для переменных, функций и миксинов
+// Note: `bower_components` уже подключена к папке с Sass's файлами
 
-// Scut, a Sass utilities library: https://davidtheclark.github.io/scut/
+// Scut, библиотека Sass инструментов: https://davidtheclark.github.io/scut/
 @import "scut/dist/scut";
 
-// Configuration variables and settings
+// Конфигурационные переменные и настройки
 @import "config";
 
-// Library: mixins, functions, etc. specific to this theme
+// Библиотека: миксины, функции, и т.д. специфические для этой темы
 @import "library";
 
 /*!
@@ -23,22 +23,20 @@ License: #{metadata(theme-license)}
 License URI: #{metadata(theme-license-uri)}
 */
 
-// Normalize: make browsers render things more consistently
+// Normalize: установка стилей по-умолчанию для всех браузеров
 @import "normalize";
 
-// Include Bootstrap
+// Подключаем Bootstrap
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-// Reset: eliminate default browser styling (optional; commented out by default)
+// Reset: сброс стандартных стилей для всех браузеров ( опционален, закомментирован по-умолчанию )
 //@import "reset";
 
-// Everything else
+// Всё остальное
 @import "helpers";
 @import "general";
 @import "layout";
 @import "menus";
 @import "navigation";
 @import "sidebar";
-body{
-	background: red;
-}
+

@@ -20,7 +20,7 @@ function voidx_setup() {
   if( ! is_admin() and ! is_login_page() ){
     wp_enqueue_style( 'main-style', get_stylesheet_uri() );
   }
-  // Подключаем файл скриптов
+  // Подключаем основной файл скриптов в <head>
   wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js' );
 
   // $content_width ограничивает максимальную ширину изображений, загружаемых через визуальный редактор
