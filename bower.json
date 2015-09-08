@@ -1,11 +1,11 @@
 {
-  "name": "wordpress-gulp-bower-sass",
-  "homepage": "https://github.com/synapticism/wordpress-gulp-bower-sass",
+  "name": "A WordPress/Gulp/Bower/Sass/jQuery/Bootstrap starter kit",
+  "homepage": "https://github.com/Sigizmund2012/gulp-bower-sass-jquery-and-bootstrap-Wordpress-template",
   "authors": [
     {
-      "name": "Alexander Synaptic",
-      "email": "alexander@synapticism.com",
-      "homepage": "http://synapticism.com"
+      "name": "Smartfreelancer",
+      "email": "segeda823@mail.ru",
+      "homepage": "http://smartfreelancer.ru/"
     }
   ],
   "keywords": [
