@@ -27,7 +27,7 @@
   "main": "gulpfile.js",
   "private": true,
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
+    "autoprefixer": "^6.0.2",
     "browser-sync": "^2.8.2",
     "del": "^1.2.1",
     "gulp": "^3.9.0",
@@ -49,7 +49,5 @@
     "merge-stream": "^1.0.0",
     "require-dir": "^0.3.0"
   },
-  "dependencies": {
-    "autoprefixer": "^6.0.1"
-  }
+  "dependencies": {}
 }

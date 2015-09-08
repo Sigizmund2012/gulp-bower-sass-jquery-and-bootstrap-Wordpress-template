@@ -1,6 +1,6 @@
-// ==== CONFIGURATION ==== //
+// ==== КОНФИГУРАЦИЯ ==== //
 
-// Project paths
+// Папки проекта
 var project     = 'smart', 
     src         = './src/', 
     build       = '../themes/build' + project + '/', 
@@ -9,7 +9,7 @@ var project     = 'smart',
     composer    = './vendor/'
 ;
 
-// Project settings
+// Настройки проекта
 module.exports = {
 
   bower: {
@@ -25,29 +25,29 @@ module.exports = {
   },
 
   browsersync: {
-    files: [build+'/**', '!'+build+'/**.map'] // Exclude map files
-  , notify: false // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
-  , open: true // Set to false if you don't like the browser window opening automatically
-  , port: 3000 // Port number for the live version of the site; default: 3000
-  , proxy: 'smartfreelancer.ru' // Using a proxy instead of the built-in server as we have server-side rendering to do via WordPress
-  , watchOptions: {
-      debounceDelay: 2000 // Delay for events called in succession for the same file/event
+    files: [build+'/**', '!'+build+'/**.map'], // Исключает map файлы
+    notify: false, // In-line нотификации ( блоки текста, говорящие подключились ли вы к серверу BrowserSync или нет )
+    open: true, // Поставьте false если вы не хотите, чтобы окно браузера открывалось автоматически
+    port: 3000, // Номер порта для live версии сайта; default: 3000
+    proxy: 'smartfreelancer.ru', // Использование прокси-сервера, а не встроенного сервера, чтобы сделать рендеринг с помощью WordPress
+    watchOptions: {
+      debounceDelay: 2000 // Задержка для событий, вызываемых подряд для того же файла / события
     }
   },
 
   images: {
-    build: { // Copies images from `src` to `build`; does not optimize
-      src: src+'**/*(*.png|*.jpg|*.jpeg|*.gif)'
-    , dest: build
-    }
-  , dist: {
-      src: [dist+'**/*(*.png|*.jpg|*.jpeg|*.gif)', '!'+dist+'screenshot.png']
-    , imagemin: {
-        optimizationLevel: 7
-      , progressive: true
-      , interlaced: true
-      }
-    , dest: dist
+    build: { // Копирует изображения из `src` в `build` без оптимизации
+      src: src+'**/*(*.png|*.jpg|*.jpeg|*.gif)', 
+      dest: build
+    }, 
+    dist: {
+      src: [dist+'**/*(*.png|*.jpg|*.jpeg|*.gif)', '!'+dist+'screenshot.png'], 
+      imagemin: {
+        optimizationLevel: 7, 
+        progressive: true, 
+        interlaced: true
+      }, 
+      dest: dist
     }
   },
 
@@ -56,49 +56,49 @@ module.exports = {
   },
 
   scripts: {
-    bundles: { // Bundles are defined by a name and an array of chunks to concatenate; warning: it's up to you to manage dependencies!
+    bundles: { // Связи определяются по имени, массив служит для конкатенации файлов. Внимание! Придётся управлять зависимостями вручную
       jquery: ['jquery'],
       main: ['main']
-    }
-  , chunks: { // Chunks are arrays of globs matching source files that combine to provide specific functionality
+    }, 
+    chunks: { // В массивах содержатся файлы для конкатенации
       jquery: [bower+'jquery/dist/jquery.js'],
       main: [src+'js/main.js']
-    }
-  , dest: build+'js/' // Where the scripts end up
-  , lint: {
-      src: [src+'js/**/*.js'] // Lint core scripts (for everything else we're relying on the original authors)
+    }, 
+    dest: build+'js/', // Папка, куда скрипты будут положены после обработки
+      lint: {
+      src: [src+'js/**/*.js'] // Проверка на ошибки ваших скриптов. Скрипты, загруженные через bower не проверяются
     }, 
     minify: {
-      src: [build+'js/**/*.js', '!'+build+'js/**/*.min.js'] // Avoid recursive min.min.min.js
-    , rename: { suffix: '.min' }
-    , uglify: {}
-    , dest: build+'js/'
-    }
-  , namespace: '' // Script filenames will be prefaced with this (optional; leave blank if you have no need for it but be sure to change the corresponding value in `src/inc/assets.php`)
+      src: [build+'js/**/*.js', '!'+build+'js/**/*.min.js'], // Предотвращает рекурсию min.min.min.js
+      rename: { suffix: '.min' }, 
+      uglify: {}, 
+      dest: build+'js/'
+    }, 
+    namespace: '' // Префикс к именам файлов скриптов, оставьте пустую строку, если это не нужно
   },
 
   styles: {
     build: {
-      src: [src+'scss/*.scss', '!'+src+'scss/_*.scss'] // Ignore partials
-    , dest: build
-    }
-  , dist: {
-      src: [dist+'**/*.css', '!'+dist+'**/*.min.css']
-    , dest: dist
-    }
-  , compiler: 'libsass' // Choose a Sass compiler: 'libsass' or 'ruby-sass'
-  , autoprefixer: { browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4'] }
-  , rename: { suffix: '.min' }
-  , minify: { keepSpecialComments: 1, roundingPrecision: 3 }
-  , rubySass: { // Requires the Ruby implementation of Sass; run `gem install sass` if you use this; Compass is not included by default
-      loadPath: bower // Adds the `bower_components` directory to the load path so you can @import directly
-    , precision: 6
-    , 'sourcemap=none': true // Not yet ready for prime time; Sass 3.4 has srcmaps on by default but this causes some problems in the Gulp toolchain
-  }
-  , libsass: { // Requires the libsass implementation of Sass
-      includePaths: [bower] // Adds the `bower_components` directory to the load path so you can @import directly
-    , precision: 6
-    , onError: function(err) {
+      src: [src+'scss/*.scss', '!'+src+'scss/_*.scss'], // Игнорирует файлы для импорта
+      dest: build
+    }, 
+    dist: {
+      src: [dist+'**/*.css', '!'+dist+'**/*.min.css'], 
+      dest: dist
+    }, 
+    compiler: 'libsass', // Выбор компилятора Sass: 'libsass' или 'ruby-sass'
+    autoprefixer: { browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4'] }, 
+    rename: { suffix: '.min' }, 
+    minify: { keepSpecialComments: 1, roundingPrecision: 3 }, 
+    rubySass: { // Требует Ruby для обработки Sass; запустите `gem install sass` если вы его используете; Compass по-умолчанию не включён
+      loadPath: bower, // Добавляет папку `bower_components` в путь загрузки, вы можете использовать @import без указания полного пути
+      precision: 6,
+      'sourcemap=none': true // Эта фича пока не работает должным образом, поэтому отключаем
+  }, 
+  libsass: { // Требует libsass для обработки Sass
+      includePaths: [bower], // Добавляет папку `bower_components` в путь загрузки, вы можете использовать @import без указания полного пути
+      precision: 6, 
+      onError: function(err) {
         return console.log(err);
       }
     }
@@ -106,32 +106,32 @@ module.exports = {
 
   theme: {
     lang: {
-      src: src+'languages/**/*' // Glob matching any language files you'd like to copy over
-    , dest: build+'languages/'
-    }
-  , php: {
-      src: src+'**/*.php'
-    , dest: build
+      src: src+'languages/**/*', // Переносит файлы локализаций
+      dest: build+'languages/'
+    }, 
+    php: {
+      src: src+'**/*.php', 
+      dest: build
     }
   },
 
   utils: {
-    clean: [build+'**/.DS_Store'] // A glob matching junk files to clean out of `build`
-  , wipe: [dist] // Clean this out before creating a new distribution copy
-  , dist: {
-      src: [build+'**/*', '!'+build+'**/*.min.css*']
-    , dest: dist
+    clean: [build+'**/.DS_Store'], // Удаляет лишние файлы из `build`
+    wipe: [dist], // Очищает папку перед созданием новой копии проекта
+    dist: {
+      src: [build+'**/*', '!'+build+'**/*.min.css*'],
+      dest: dist
     }
   },
 
-  watch: { // What to watch before triggering each specified task
+  watch: { // Отслеживаемые файлы
     src: {
-      styles:       src+'scss/**/*.scss'
-    , scripts:      [src+'js/**/*.js', bower+'**/*.js']
-    , images:       src+'**/*(*.png|*.jpg|*.jpeg|*.gif)'
-    , theme:        src+'**/*.php'
-    , livereload:   [build+'**/*']
+      styles:       src+'scss/**/*.scss', 
+      scripts:      [src+'js/**/*.js', bower+'**/*.js'], 
+      images:       src+'**/*(*.png|*.jpg|*.jpeg|*.gif)', 
+      theme:        src+'**/*.php', 
+      livereload:   [build+'**/*']
     }, 
-    watcher: 'browsersync' // Who watches the watcher? Easily switch between BrowserSync ('browsersync') and Livereload ('livereload')
+    watcher: 'browsersync' // Кто watcher? Переключайтесь между BrowserSync ('browsersync') и Livereload ('livereload')
   }
 };
