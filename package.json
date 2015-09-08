@@ -1,11 +1,11 @@
 {
-  "name": "wordpress-gulp-bower-sass",
+  "name": "wordpress-gulp-bower-sass-jquery-bootstrap",
   "version": "0.0.7",
-  "description": "A WordPress/Gulp/Bower/Sass starter kit",
-  "homepage": "https://github.com/synapticism/wordpress-gulp-bower-sass",
+  "description": "A WordPress/Gulp/Bower/Sass/jQuery/Bootstrap starter kit",
+  "homepage": "https://github.com/Sigizmund2012/gulp-bower-sass-jquery-and-bootstrap-Wordpress-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/synapticism/wordpress-gulp-bower-sass.git"
+    "url": "https://github.com/Sigizmund2012/gulp-bower-sass-jquery-and-bootstrap-Wordpress-template"
   },
   "keywords": [
     "wordpress",
@@ -22,7 +22,7 @@
   "scripts": {
     "postinstall": "bower install"
   },
-  "author": "Alexander Synaptic <alexander@synapticism.com>",
+  "author": "Smartfreelancer",
   "license": "GPL-3.0",
   "main": "gulpfile.js",
   "private": true,
