@@ -1,6 +1,6 @@
 {
-  "name": "synapticism/wordpress-gulp-bower-sass",
-  "description": "A WordPress/Gulp/Bower/Sass starter kit",
+  "name": "WordPress/Gulp/Bower/Sass/jQuery/Bootstrap",
+  "description": "A WordPress/Gulp/Bower/Sass/jQuery/Bootstrap starter kit",
   "keywords": [
     "wordpress",
     "wordpress-theme",
@@ -13,13 +13,13 @@
     "browsersync",
     "livereload"
   ],
-  "homepage": "https://github.com/synapticism/wordpress-gulp-bower-sass",
+  "homepage": "https://github.com/Sigizmund2012/gulp-bower-sass-jquery-and-bootstrap-Wordpress-template",
   "license": "GPL-3.0",
   "authors": [
     {
-      "name": "Alexander Synaptic",
-      "email": "alexander@synapticism.com",
-      "homepage": "http://alexandersynaptic.com"
+      "name": "Smartfreelancer",
+      "email": "segeda823@mail.ru",
+      "homepage": "http://smartfreelancer.ru/"
     }
   ],
   "type": "library"
