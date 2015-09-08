@@ -1,22 +1,26 @@
 // ==== CONFIGURATION ==== //
 
 // Project paths
-var project     = 'smart'
-  , src         = './src/'
-  , build       = '../themes/build' + project + '/'
-  , dist        = '../themes/'+project+'/'
-  , bower       = './bower_components/'
-  , composer    = './vendor/'
+var project     = 'smart', 
+    src         = './src/', 
+    build       = '../themes/build' + project + '/', 
+    dist        = '../themes/'+project+'/', 
+    bower       = './bower_components/', 
+    composer    = './vendor/'
 ;
 
 // Project settings
 module.exports = {
 
   bower: {
-    normalize: { // Copies `normalize.css` from `bower_components` to `src/scss` and renames it to allow for it to imported as a Sass file
-      src: bower+'normalize.css/normalize.css'
-    , dest: src+'scss'
-    , rename: '_normalize.scss'
+    normalize: { // Копирует `normalize.css` из `bower_components` в `src/scss` и переименовывает его для импорта как Sass файл
+      src: bower+'normalize.css/normalize.css', 
+      dest: src+'scss', 
+      rename: '_normalize.scss'
+    },
+    bootstrap: { // Копирует папку `fonts` из `bower_components` в `build`
+      src: bower + 'bootstrap-sass/assets/fonts/**/*', 
+      dest: build + 'fonts/' 
     }
   },
 

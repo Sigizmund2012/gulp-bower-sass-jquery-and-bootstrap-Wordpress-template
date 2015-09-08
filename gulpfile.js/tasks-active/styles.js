@@ -15,6 +15,7 @@ gulp.task('styles-ruby-sass', function() {
   .pipe(plugins.rubySass(config.rubySass))
   .on('error', gutil.log) // Log errors instead of killing the process
   .pipe(plugins.postcss([autoprefixer(config.autoprefixer)]))
+  .pipe(replace(/\.\.\//g, ''))
   .pipe(gulp.dest(config.build.dest)) // Drops the unminified CSS file into the `build` folder
   .pipe(plugins.rename(config.rename))
   .pipe(plugins.minifyCss(config.minify))
@@ -27,6 +28,7 @@ gulp.task('styles-libsass', function() {
   .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(config.libsass))
     .pipe(plugins.postcss([autoprefixer(config.autoprefixer)]))
+    .pipe(replace(/\.\.\//g, ''))
   .pipe(plugins.sourcemaps.write()) // Write internal sourcemap
   .pipe(gulp.dest(config.build.dest)) // Drops the unminified CSS file into the `build` folder
   .pipe(plugins.rename(config.rename))

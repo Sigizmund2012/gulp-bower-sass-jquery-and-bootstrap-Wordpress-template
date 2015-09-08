@@ -15,3 +15,8 @@ gulp.task('bower-normalize', function() {
   .pipe(plugins.rename(config.normalize.rename))
   .pipe(gulp.dest(config.normalize.dest));
 });
+
+gulp.task('bower-bootstrap', function() {
+  return gulp.src(config.bootstrap.src)
+  .pipe(gulp.dest(config.bootstrap.dest));
+});
