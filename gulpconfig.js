@@ -57,11 +57,11 @@ module.exports = {
 
   scripts: {
     bundles: { // Связи определяются по имени, массив служит для конкатенации файлов. Внимание! Придётся управлять зависимостями вручную
-      jquery: ['jquery'],
-      main: ['main']
+      main: ['jquery', 'bootstrap', 'main'],
     }, 
     chunks: { // В массивах содержатся файлы для конкатенации
       jquery: [bower+'jquery/dist/jquery.js'],
+      bootstrap: [bower+'bootstrap-sass/assets/javascripts/bootstrap.js'],
       main: [src+'js/main.js']
     }, 
     dest: build+'js/', // Папка, куда скрипты будут положены после обработки
@@ -69,10 +69,7 @@ module.exports = {
       src: [src+'js/**/*.js'] // Проверка на ошибки ваших скриптов. Скрипты, загруженные через bower не проверяются
     }, 
     minify: {
-      src: [build+'js/**/*.js', '!'+build+'js/**/*.min.js'], // Предотвращает рекурсию min.min.min.js
-      rename: { suffix: '.min' }, 
-      uglify: {}, 
-      dest: build+'js/'
+      uglify: {}
     }, 
     namespace: '' // Префикс к именам файлов скриптов, оставьте пустую строку, если это не нужно
   },

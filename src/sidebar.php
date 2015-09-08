@@ -1,6 +1,6 @@
-<div id="wrap-sidebar" class="wrap-sidebar">
+<div>
   <?php if ( is_active_sidebar( 'sidebar-main' ) ) { ?>
-    <div id="secondary" class="widget-area" role="complementary">
+    <div role="complementary">
       <?php dynamic_sidebar( 'sidebar-main' ); ?>
     </div>
   <?php } ?>

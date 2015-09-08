@@ -36,6 +36,7 @@ gulp.task('scripts-bundle', ['scripts-lint'], function(){
   // Iterate through each bundle in the bundles array
   var tasks = bundles.map(function(bundle) {
     return gulp.src(bundle[1]) // bundle[1]: the list of source files
+    .pipe(plugins.uglify(config.minify.uglify))
     .pipe(plugins.concat(config.namespace + bundle[0].replace(/_/g, '-') + '.js')) // bundle[0]: the nice name of the script; underscores are replaced with hyphens
     .pipe(gulp.dest(config.dest));
   });
@@ -44,13 +45,6 @@ gulp.task('scripts-bundle', ['scripts-lint'], function(){
   return merge(tasks);
 });
 
-// Minify scripts in place
-gulp.task('scripts-minify', ['scripts-bundle'], function(){
-  return gulp.src(config.minify.src)
-  .pipe(plugins.rename(config.minify.rename))
-  .pipe(plugins.uglify(config.minify.uglify))
-  .pipe(gulp.dest(config.minify.dest));
-});
 
 // Master script task; lint -> bundle -> minify
-gulp.task('scripts', ['scripts-minify']);
+gulp.task('scripts', ['scripts-bundle']);
