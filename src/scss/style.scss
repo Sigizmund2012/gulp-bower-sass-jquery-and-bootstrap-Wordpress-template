@@ -3,9 +3,6 @@
 // Не пишите стилей до блока с метаданными, эта начальная секция лишь для переменных, функций и миксинов
 // Note: `bower_components` уже подключена к папке с Sass's файлами
 
-// Scut, библиотека Sass инструментов: https://davidtheclark.github.io/scut/
-@import "scut/dist/scut";
-
 // Конфигурационные переменные и настройки
 @import "config";
 
@@ -33,10 +30,6 @@ License URI: #{metadata(theme-license-uri)}
 //@import "reset";
 
 // Всё остальное
-@import "helpers";
 @import "general";
-@import "layout";
-@import "menus";
-@import "navigation";
 @import "sidebar";
 

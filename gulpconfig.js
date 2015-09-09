@@ -3,7 +3,7 @@
 // Папки проекта. Предполагается, что папка с Gulp содержится в папке wp-content
 var project     = 'smart', 
     src         = './src/', 
-    build       = '../themes/build' + project + '/', 
+    build       = '../themes/build-' + project + '/', 
     dist        = '../themes/'+project+'/', 
     bower       = './bower_components/', 
     composer    = './vendor/'

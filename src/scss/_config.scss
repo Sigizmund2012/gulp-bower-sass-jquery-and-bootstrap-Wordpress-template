@@ -2,35 +2,20 @@
 
 // Устанавливайте все конфигурационные переменные здесь!
 
-// Width of the overall site as well as the left and right content columns
-$width-site:    1000px;
-$width-left:    650px;
-$width-right:   350px;
-
-// Breakpoints
-$break-small:   480px;
-$break-medium:  620px;
-$break-large:   800px;
-
-// A standard margin
-$spacer:        30px;
-
-// A modest palette; see `_library.scss` for the color() function
+// Начальная палитра, смотрите `_library.scss` для просмотра кода color()
 $_color: (
   text: #333,
-  link: steelblue,
-  link-muted: steelblue,
   body-background: white
 );
 
-// Metadata; use metadata() to access
+// Метаданные, используйте metadata() для доступа к значениям
 $_metadata: (
-  theme-name:               "Smart"
-, theme-uri:                "http://smartfreelancer.ru/"
-, theme-author:             "Smartfreelancer"
-, theme-author-uri:         "http://smartfreelancer.ru/"
-, theme-description:        "Theme for Smartfreelancer site"
-, theme-version:            "1.0.0"
-, theme-license:            "GPLv3"
-, theme-license-uri:        "http://www.gnu.org/licenses/gpl.txt"
+  theme-name:               "Smart", 
+  theme-uri:                "http://smartfreelancer.ru/", 
+  theme-author:             "Smartfreelancer", 
+  theme-author-uri:         "http://smartfreelancer.ru/", 
+  theme-description:        "Theme for Smartfreelancer site", 
+  theme-version:            "1.0.0", 
+  theme-license:            "GPLv3", 
+  theme-license-uri:        "http://www.gnu.org/licenses/gpl.txt"
 );
