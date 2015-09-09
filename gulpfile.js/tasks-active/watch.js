@@ -1,12 +1,12 @@
 // ==== WATCH ==== //
 
-var gulp        = require('gulp')
-  , plugins     = require('gulp-load-plugins')({ camelize: true })
-  , config      = require('../../gulpconfig').watch
+var gulp        = require('gulp'), 
+    plugins     = require('gulp-load-plugins')({ camelize: true }), 
+    config      = require('../../gulpconfig').watch
 ;
 
-// Watch (BrowserSync version): build stuff when source files are modified, let BrowserSync figure out when to reload
-// Task chain: build -> browsersync -> watch
+// Watch (BrowserSync версия): собирает проект, если файлы были изменены, позволяет BrowserSync перезагрузить страницу
+// Цепочка задач: build -> browsersync -> watch
 gulp.task('watch-browsersync', ['browsersync'], function() {
   gulp.watch(config.src.styles, ['styles']);
   gulp.watch(config.src.scripts, ['scripts']);
@@ -14,8 +14,8 @@ gulp.task('watch-browsersync', ['browsersync'], function() {
   gulp.watch(config.src.theme, ['theme']);
 });
 
-// Watch (Livereload version): build stuff when source files are modified, inform livereload when anything in the `build` or `dist` folders change
-// Task chain: build -> livereload -> watch
+// Watch (Livereload версия): собирает проект, если файлы были изменены, информирует livereload о том, что папка `build` или `dist` была изменена
+// Цепочка задач: build -> livereload -> watch
 gulp.task('watch-livereload', ['livereload'], function() {
   gulp.watch(config.src.styles, ['styles']);
   gulp.watch(config.src.scripts, ['scripts']);
@@ -26,5 +26,5 @@ gulp.task('watch-livereload', ['livereload'], function() {
   });
 });
 
-// Master control switch for the watch task
+// Определение вотчера и установка задачи
 gulp.task('watch', ['watch-'+config.watcher]);

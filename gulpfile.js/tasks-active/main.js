@@ -1,13 +1,13 @@
-// ==== MAIN ==== //
+// ==== ОСНОВНОЙ ФАЙЛ ==== //
 
 var gulp = require('gulp');
 
-// Default task chain: build -> (livereload or browsersync) -> watch
+// Цепочка задач по-умолчанию: build -> (livereload или browsersync) -> watch
 gulp.task('default', ['watch']);
 
-// Build a working copy of the theme
+// Создание рабочей копии темы
 gulp.task('build', ['images', 'scripts', 'styles', 'theme', 'bower-bootstrap']);
 
-// Dist task chain: wipe -> build -> clean -> copy -> images/styles
-// NOTE: this is a resource-intensive task!
+// Цепочка задач для продакшена: wipe -> build -> clean -> copy -> images/styles
+// Это ресурсоёмкая задача!
 gulp.task('dist', ['images-dist', 'styles-dist']);

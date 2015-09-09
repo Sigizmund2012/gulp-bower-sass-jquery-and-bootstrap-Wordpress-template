@@ -9,43 +9,43 @@ var gulp          = require('gulp'),
 ;
 
 
-// Build stylesheets from source Sass files, autoprefix, and make a minified copy (for debugging) with rubySass
+// Создаёт файл css из файлов Sass , расставляет вендорные префиксы и минифицирует с помощью rubySass
 gulp.task('styles-ruby-sass', function() {
   return gulp.src(config.build.src)
   .pipe(plugins.rubySass(config.rubySass))
-  .on('error', gutil.log) // Log errors instead of killing the process
-  .pipe(plugins.postcss([autoprefixer(config.autoprefixer)]))
-  .pipe(replace(/\.\.\//g, ''))
-  .pipe(gulp.dest(config.build.dest)) // Drops the unminified CSS file into the `build` folder
+  .on('error', gutil.log) // Логирует ошибки вместо убийства процесса
+  .pipe(plugins.postcss([autoprefixer(config.autoprefixer)])) // Расставляет вендорные префиксы
+  .pipe(replace(/\.\.\//g, '')) // Удаляет обращение к вышестоящей папке ../ нужно для правильной работы Bootstrap
+  .pipe(gulp.dest(config.build.dest)) // Помещает не минимизированный файл в папку `build`
   .pipe(plugins.rename(config.rename))
   .pipe(plugins.minifyCss(config.minify))
-  .pipe(gulp.dest(config.build.dest)); // Drops a minified CSS file into the `build` folder for debugging
+  .pipe(gulp.dest(config.build.dest)); // Помещает минимизированный файл в папку `build` для отладки
 });
 
-// Build stylesheets from source Sass files, autoprefix, and make a minified copy (for debugging) with libsass
+// Создаёт файл css из файлов Sass , расставляет вендорные префиксы и минифицирует с помощью libsass
 gulp.task('styles-libsass', function() {
   return gulp.src(config.build.src)
   .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(config.libsass))
-    .pipe(plugins.postcss([autoprefixer(config.autoprefixer)]))
-    .pipe(replace(/\.\.\//g, ''))
-  .pipe(plugins.sourcemaps.write()) // Write internal sourcemap
-  .pipe(gulp.dest(config.build.dest)) // Drops the unminified CSS file into the `build` folder
+    .pipe(plugins.postcss([autoprefixer(config.autoprefixer)])) // Расставляет вендорные префиксы
+    .pipe(replace(/\.\.\//g, '')) // Удаляет обращение к вышестоящей папке ../ нужно для правильной работы Bootstrap
+  .pipe(plugins.sourcemaps.write()) // Пишет внутреннюю sourcemap
+  .pipe(gulp.dest(config.build.dest)) // // Помещает не минимизированный файл в папку `build`
   .pipe(plugins.rename(config.rename))
   .pipe(plugins.sourcemaps.init())
     .pipe(plugins.minifyCss(config.minify))
-  .pipe(plugins.sourcemaps.write('./')) // Write external sourcemap
-  .pipe(gulp.dest(config.build.dest)); // Drops a minified CSS file into the `build` folder for debugging
+  .pipe(plugins.sourcemaps.write('./')) // Пишет внешнюю sourcemap
+  .pipe(gulp.dest(config.build.dest)); // // Помещает минимизированный файл в папку `build` для отладки
 });
 
-// Copy stylesheets from the `build` folder to `dist` and minify them along the way
+// Копирует файлы css из папки `build` в `dist` и минифицирует
 gulp.task('styles-dist', ['utils-dist'], function() {
   return gulp.src(config.dist.src)
   .pipe(plugins.sourcemaps.init())
     .pipe(plugins.minifyCss(config.minify))
-  .pipe(plugins.sourcemaps.write('./')) // Write external sourcemap
+  .pipe(plugins.sourcemaps.write('./')) // Пишет внешнюю sourcemap
   .pipe(gulp.dest(config.dist.dest));
 });
 
-// Easily configure the Sass compiler from `/gulpconfig.js`
+// Определяет компилятор Sass из `/gulpconfig.js`
 gulp.task('styles', ['styles-'+config.compiler]);

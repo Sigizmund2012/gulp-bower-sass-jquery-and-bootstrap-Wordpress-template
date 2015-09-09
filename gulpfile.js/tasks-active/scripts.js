@@ -1,50 +1,50 @@
-// ==== SCRIPTS ==== //
+// ==== СКРИПТЫ ==== //
 
-var gulp        = require('gulp')
-  , plugins     = require('gulp-load-plugins')({ camelize: true })
-  , merge       = require('merge-stream')
-  , config      = require('../../gulpconfig').scripts
+var gulp        = require('gulp'), 
+    plugins     = require('gulp-load-plugins')({ camelize: true }), 
+    merge       = require('merge-stream'), 
+    config      = require('../../gulpconfig').scripts
 ;
 
-// Check core scripts for errors
+// Проверяет ваши скрипты на ошибки
 gulp.task('scripts-lint', function() {
   return gulp.src(config.lint.src)
   .pipe(plugins.jshint('.jshintrc'))
-  .pipe(plugins.jshint.reporter('default')); // No need to pipe this anywhere
+  .pipe(plugins.jshint.reporter('default')); // Нет смысла запускать это везде
 });
 
-// Generate script bundles as defined in the configuration file
-// Adapted from https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-task-steps-per-folder.md
+// Генерирует пакеты скриптов, определённых в файле конфигурации
+// Адаптировано из https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-task-steps-per-folder.md
 gulp.task('scripts-bundle', ['scripts-lint'], function(){
   var bundles = [];
 
-  // Iterate through all bundles defined in the configuration
+  // Перебирает все пакеты определённые в файле конфигурации
   for (var bundle in config.bundles) {
     if (config.bundles.hasOwnProperty(bundle)) {
       var chunks = [];
 
-      // Iterate through each bundle and mash the chunks together
+      // Перебирает пакеты и склеивает части воедино
       config.bundles[bundle].forEach(function(chunk){
         chunks = chunks.concat(config.chunks[chunk]);
       });
 
-      // Push the results to the bundles array
+      // Добавляет результаты в массив пакетов
       bundles.push([bundle, chunks]);
     }
   }
 
-  // Iterate through each bundle in the bundles array
+  // Перебирает каждый пакет в массиве
   var tasks = bundles.map(function(bundle) {
-    return gulp.src(bundle[1]) // bundle[1]: the list of source files
-    .pipe(plugins.uglify(config.minify.uglify))
-    .pipe(plugins.concat(config.namespace + bundle[0].replace(/_/g, '-') + '.js')) // bundle[0]: the nice name of the script; underscores are replaced with hyphens
+    return gulp.src(bundle[1]) // bundle[1]: список исходников
+    .pipe(plugins.uglify(config.minify.uglify)) // Минификация
+    .pipe(plugins.concat(config.namespace + bundle[0].replace(/_/g, '-') + '.js')) // bundle[0]: Конечное имя скрипта, нижние подчёркивания заменяются дефисами
     .pipe(gulp.dest(config.dest));
   });
 
-  // Cross the streams ;)
+  // Смешиваем потоки ;)
   return merge(tasks);
 });
 
 
-// Master script task; lint -> bundle -> minify
+// Цепочка задач: lint -> bundle -> minify -> concat
 gulp.task('scripts', ['scripts-bundle']);
