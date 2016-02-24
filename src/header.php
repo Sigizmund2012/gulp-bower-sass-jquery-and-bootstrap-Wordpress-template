@@ -10,3 +10,12 @@
 <?php wp_head(); ?>
 </head>
 <body>
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="container">
+				<div class="row"></div>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,15 +1,5 @@
 // ==== БИБЛИОТЕКА ==== //
 
-// Простая функция для извлечения цвета из массива, адаптировано из http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
-@function color($request) {
-  @return config($_color, $request);
-}
-
-// То же самое для метаданных темы
-@function metadata($request) {
-  @return config($_metadata, $request);
-}
-
 // Font-face mixin
 
 @mixin font-face($family, $file-name, $weight: normal, $style: normal) {
