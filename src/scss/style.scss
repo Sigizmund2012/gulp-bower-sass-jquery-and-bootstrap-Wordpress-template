@@ -23,13 +23,28 @@ License URI: #{metadata(theme-license-uri)}
 // Normalize: установка стилей по-умолчанию для всех браузеров
 @import "normalize";
 
-// Подключаем Bootstrap
-@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
 // Reset: сброс стандартных стилей для всех браузеров ( опционален, закомментирован по-умолчанию )
 //@import "reset";
+
+// Подключаем Bootstrap
+@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 // Всё остальное
 @import "general";
 @import "sidebar";
 
+.logo{
+	width: 200px;
+	&_background{
+		background: red;
+	}
+	&__title{
+		font-size: 22px;
+		&_transform{
+			transform: rotate(5deg);
+		}
+		&_transition{
+			transition: all 0.4s;
+		}
+	}
+}

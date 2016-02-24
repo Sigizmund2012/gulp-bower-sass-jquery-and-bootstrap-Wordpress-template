@@ -15,7 +15,7 @@ module.exports = {
   bower: {
     normalize: { // Копирует `normalize.css` из `bower_components` в `src/scss` и переименовывает его для импорта как Sass файл
       src: bower+'normalize.css/normalize.css', 
-      dest: src+'scss', 
+      dest: src+'scss',
       rename: '_normalize.scss'
     },
     bootstrap: { // Копирует папку `bootstrap-sass/assets/fonts/` из `bower_components` в `build`
@@ -30,6 +30,7 @@ module.exports = {
     open: true, // Поставьте false если вы не хотите, чтобы окно браузера открывалось автоматически
     port: 3000, // Номер порта для live версии сайта; default: 3000
     proxy: 'smartfreelancer.ru', // Использование прокси-сервера, а не встроенного сервера, чтобы сделать рендеринг с помощью WordPress
+    browser: "google chrome",
     watchOptions: {
       debounceDelay: 2000 // Задержка для событий, вызываемых подряд для того же файла / события
     }
