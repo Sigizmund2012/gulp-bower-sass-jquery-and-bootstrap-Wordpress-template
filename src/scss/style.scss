@@ -20,9 +20,20 @@ License: #{metadata(theme-license)}
 License URI: #{metadata(theme-license-uri)}
 */
 
+// Open Sans
+@include font-face(open-sans, light, 200)
+@include font-face(open-sans, light-italic, 200, italic)
+@include font-face(open-sans, regular) // 400
+@include font-face(open-sans, regular, normal, italic) // 400
+@include font-face(open-sans, semibold, 600)
+@include font-face(open-sans, semibold-italic, 600, italic)
+@include font-face(open-sans, bold, bold) // 700
+@include font-face(open-sans, bold-italic, bold, italic) // 700
+@include font-face(open-sans, extrabold, 800)
+@include font-face(open-sans, extrabold-italic, 800, italic)
 
-// Reset: сброс стандартных стилей для всех браузеров ( опционален, закомментирован по-умолчанию )
-//@import "reset";
+// Awesome
+@include font-face(awesome, fontawesome-webfont)
 
 // Подключаем Bootstrap
 @import "_bootstrap.scss";
@@ -31,18 +42,3 @@ License URI: #{metadata(theme-license-uri)}
 @import "general";
 @import "sidebar";
 
-.logo{
-	width: 200px;
-	&_background{
-		background: red;
-	}
-	&__title{
-		font-size: 22px;
-		&_transform{
-			transform: rotate(5deg);
-		}
-		&_transition{
-			transition: all 0.4s;
-		}
-	}
-}

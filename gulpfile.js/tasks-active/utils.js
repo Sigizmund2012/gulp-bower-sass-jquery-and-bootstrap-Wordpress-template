@@ -7,7 +7,7 @@ var gulp        = require('gulp'),
 ;
 
 // Полностью удаляет всё из папки `dist`, также запускает задачу Bower для получения последних версий файлов
-gulp.task('utils-wipe', [], function(cb) {
+gulp.task('utils-wipe', [ 'bower' ], function(cb) {
   del(config.wipe, cb);
 });
 

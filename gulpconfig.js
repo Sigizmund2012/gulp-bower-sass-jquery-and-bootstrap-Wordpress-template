@@ -15,7 +15,19 @@ module.exports = {
     bootstrap: { // Копирует папку `bootstrap-sass/assets/stylesheets/` из `bower_components` в `src`
       src: bower + 'bootstrap-sass/assets/stylesheets/**/*',
       dest: src + 'scss/'
-    }
+    },
+	fonts: {
+		awesome: {
+			src: bower + 'components-font-awesome/fonts/**/*',
+			dest: src + 'scss/fonts/awesome/',
+			destBuild: build + 'fonts/awesome/'
+		},
+		openSans: {
+			src: [ bower + 'google-open-sans/open-sans/**/*' ],
+			dest: src + 'scss/fonts/open-sans/',
+			destBuild: build + 'fonts/open-sans/'
+		}
+	}
   },
 
   browsersync: {

@@ -30,6 +30,8 @@
   "devDependencies": {},
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "jquery": "~1.11.3"
+    "jquery": "~1.11.3",
+    "components-font-awesome": "^4.5.0",
+    "google-open-sans": "^1.0.0"
   }
 }
