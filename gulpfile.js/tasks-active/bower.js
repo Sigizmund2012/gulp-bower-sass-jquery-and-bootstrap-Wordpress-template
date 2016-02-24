@@ -5,10 +5,9 @@ var gulp        = require('gulp'),
 	config      = require('../../gulpconfig').bower
 ;
 
-// Эта задача выполняется при вводе в консоль `bower update` а также `npm update`, используйте её для копирования и трансформации файлов, загруженных через Bower
 gulp.task('bower', ['bower-bootstrap']);
 
-// Копирует папку `bootstrap-sass/assets/fonts/` из `bower_components` в `build`
+// Копирует папку `bootstrap-sass/assets/stylesheets/` из `bower_components` в `src`. Запускать вручную 'gulp bower-bootstrap'
 gulp.task('bower-bootstrap', function() {
   return gulp.src(config.bootstrap.src)
   .pipe(gulp.dest(config.bootstrap.dest));

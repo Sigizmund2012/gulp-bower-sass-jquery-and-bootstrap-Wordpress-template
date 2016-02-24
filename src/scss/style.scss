@@ -25,7 +25,7 @@ License URI: #{metadata(theme-license-uri)}
 //@import "reset";
 
 // Подключаем Bootstrap
-@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "_bootstrap.scss";
 
 // Всё остальное
 @import "general";

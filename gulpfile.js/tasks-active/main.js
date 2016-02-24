@@ -6,7 +6,7 @@ var gulp = require('gulp');
 gulp.task('default', ['watch']);
 
 // Создание рабочей копии темы
-gulp.task('build', ['images', 'scripts', 'styles', 'theme', 'bower-bootstrap']);
+gulp.task('build', ['images', 'scripts', 'styles', 'theme' ]);
 
 // Цепочка задач для продакшена: wipe -> build -> clean -> copy -> images/styles
 // Это ресурсоёмкая задача!

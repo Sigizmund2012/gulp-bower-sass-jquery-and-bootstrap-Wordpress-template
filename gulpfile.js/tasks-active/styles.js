@@ -4,8 +4,7 @@ var gulp          = require('gulp'),
     gutil         = require('gulp-util'), 
     plugins       = require('gulp-load-plugins')({ camelize: true }), 
     config        = require('../../gulpconfig').styles, 
-    autoprefixer  = require('autoprefixer'),
-    replace = require('gulp-replace')
+    autoprefixer  = require('autoprefixer')
 ;
 
 
@@ -15,7 +14,6 @@ gulp.task('styles-ruby-sass', function() {
   .pipe(plugins.rubySass(config.rubySass))
   .on('error', gutil.log) // Логирует ошибки вместо убийства процесса
   .pipe(plugins.postcss([autoprefixer(config.autoprefixer)])) // Расставляет вендорные префиксы
-  .pipe(replace(/\.\.\//g, '')) // Удаляет обращение к вышестоящей папке ../ нужно для правильной работы Bootstrap
   .pipe(gulp.dest(config.build.dest)) // Помещает не минимизированный файл в папку `build`
   .pipe(plugins.rename(config.rename))
   .pipe(plugins.minifyCss(config.minify))
@@ -28,7 +26,6 @@ gulp.task('styles-libsass', function() {
   .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass(config.libsass))
     .pipe(plugins.postcss([autoprefixer(config.autoprefixer)])) // Расставляет вендорные префиксы
-    .pipe(replace(/\.\.\//g, '')) // Удаляет обращение к вышестоящей папке ../ нужно для правильной работы Bootstrap
   .pipe(plugins.sourcemaps.write()) // Пишет внутреннюю sourcemap
   .pipe(gulp.dest(config.build.dest)) // // Помещает не минимизированный файл в папку `build`
   .pipe(plugins.rename(config.rename))

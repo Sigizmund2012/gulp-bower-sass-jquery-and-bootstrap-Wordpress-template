@@ -5,17 +5,16 @@ var project     = 'smart',
     src         = './src/', 
     build       = '../themes/build-' + project + '/', 
     dist        = '../themes/'+project+'/', 
-    bower       = './bower_components/', 
-    composer    = './vendor/'
+    bower       = './bower_components/'
 ;
 
 // Настройки проекта
 module.exports = {
 
   bower: {
-    bootstrap: { // Копирует папку `bootstrap-sass/assets/fonts/` из `bower_components` в `build`
-      src: bower + 'bootstrap-sass/assets/fonts/**/*', 
-      dest: build + 'fonts/' 
+    bootstrap: { // Копирует папку `bootstrap-sass/assets/stylesheets/` из `bower_components` в `src`
+      src: bower + 'bootstrap-sass/assets/stylesheets/**/*',
+      dest: src + 'scss/'
     }
   },
 
@@ -53,7 +52,7 @@ module.exports = {
 
   scripts: {
     bundles: { // Связи определяются по имени, массив служит для конкатенации файлов. Внимание! Придётся управлять зависимостями вручную
-      main: ['jquery', 'bootstrap', 'main'],
+      main: ['jquery', 'bootstrap', 'main']
     }, 
     chunks: { // В массивах содержатся файлы для конкатенации
       jquery: [bower+'jquery/dist/jquery.js'],
