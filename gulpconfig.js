@@ -13,11 +13,6 @@ var project     = 'smart',
 module.exports = {
 
   bower: {
-    normalize: { // Копирует `normalize.css` из `bower_components` в `src/scss` и переименовывает его для импорта как Sass файл
-      src: bower+'normalize.css/normalize.css', 
-      dest: src+'scss',
-      rename: '_normalize.scss'
-    },
     bootstrap: { // Копирует папку `bootstrap-sass/assets/fonts/` из `bower_components` в `build`
       src: bower + 'bootstrap-sass/assets/fonts/**/*', 
       dest: build + 'fonts/' 

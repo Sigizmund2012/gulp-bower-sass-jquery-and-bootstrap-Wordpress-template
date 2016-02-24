@@ -20,8 +20,6 @@ License: #{metadata(theme-license)}
 License URI: #{metadata(theme-license-uri)}
 */
 
-// Normalize: установка стилей по-умолчанию для всех браузеров
-@import "normalize";
 
 // Reset: сброс стандартных стилей для всех браузеров ( опционален, закомментирован по-умолчанию )
 //@import "reset";
