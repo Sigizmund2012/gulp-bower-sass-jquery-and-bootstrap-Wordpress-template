@@ -2,7 +2,7 @@
 
 // Папки проекта. Предполагается, что папка с Gulp содержится в папке wp-content
 var project     = 'smart', 
-    src         = './src/', 
+    src         = 'src/',
     build       = '../themes/build-' + project + '/', 
     dist        = '../themes/'+project+'/', 
     bower       = './bower_components/'
@@ -44,9 +44,9 @@ module.exports = {
 
   images: {
     build: { // Копирует изображения из `src` в `build` без оптимизации
-      src: src+'**/*(*.png|*.jpg|*.jpeg|*.gif)', 
-      dest: build
-    }, 
+      src: src + 'scss/img/**/*',
+      dest: build + 'img/'
+    },
     dist: {
       src: [dist+'**/*(*.png|*.jpg|*.jpeg|*.gif)', '!'+dist+'screenshot.png'], 
       imagemin: {
@@ -133,7 +133,7 @@ module.exports = {
       styles:       src+'scss/**/*.scss', 
       scripts:      [src+'js/**/*.js', bower+'**/*.js'], 
       images:       src+'**/*(*.png|*.jpg|*.jpeg|*.gif)', 
-      theme:        src+'**/*.php', 
+      theme:        src+'**/*.php',
       livereload:   [build+'**/*']
     }, 
     watcher: 'browsersync' // Кто watcher? Переключайтесь между BrowserSync ('browsersync') и Livereload ('livereload')

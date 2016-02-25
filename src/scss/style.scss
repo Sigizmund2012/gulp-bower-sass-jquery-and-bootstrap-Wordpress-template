@@ -40,5 +40,13 @@ License URI: #{metadata(theme-license-uri)}
 
 // Всё остальное
 
+/* Header */
+
+.header_bg{
+  background: url("img/header-bg.png") repeat-x bottom $main-color;
+  height: 80px;
+}
+
 @import "sidebar";
+
 
