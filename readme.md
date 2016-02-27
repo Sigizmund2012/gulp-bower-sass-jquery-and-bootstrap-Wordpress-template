@@ -1,5 +1,5 @@
-# WORDPRESS-GULP-BOWER-SASS-JQUERY-BOOTSTRAP STARTER KIT
 
+<<<<<<< HEAD
 Сделано на основе https://github.com/synapticism/wordpress-gulp-bower-sass Полностью русифицированы комментарии в коде, добавлены jQuery и Bootstrap, удалены Composer, Scut, wp-ajax reload и HTML5 history api. 
 
 Разработка темы WordPress обычным способом отнимает много времени и подвержена ошибкам. Автоматизация процесса сборки позволяет интегрировать лучшие практики, экономя время. Этот проект представляет собой комплект * стартер * для разработки высокооптимизированных тем WordPress с Gulp, Bower, Sass, jQuery и Bootstrap.
@@ -42,3 +42,5 @@ jquery: ['jquery'],
 bootstrap: ['bootstrap'],
 main: ['main']
 `
+=======
+>>>>>>> origin/master
