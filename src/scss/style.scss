@@ -42,9 +42,55 @@ License URI: #{metadata(theme-license-uri)}
 
 /* Header */
 
-.header_bg{
+.header_general{
   background: url("img/header-bg.png") repeat-x bottom $main-color;
-  height: 80px;
+  padding: 25px 0 30px;
+}
+
+.logo{
+  color: $main-link-color;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  &__smart{
+    font-family: open-sans, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__freelancer{
+    font-family: open-sans, sans-serif;
+    font-size: 25px;
+
+  }
+  &:hover{
+    color: $main-link-color;
+    text-decoration: none;
+  }
+}
+
+.header-menu-custom{
+  & a{
+    color: $main-link-color;
+    text-transform: uppercase;
+    font-family: open-sans, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+  }
+  & .current-menu-item{
+    background: $current-item-topmenu-bg;
+    border-radius: 4px;
+  }
+}
+.search{
+  color: $main-link-color;
+  font-family: awesome;
+  font-size: 16px;
+  padding: 10px 0 0;
+  cursor: pointer;
+  text-align: center;
 }
 
 @import "sidebar";
