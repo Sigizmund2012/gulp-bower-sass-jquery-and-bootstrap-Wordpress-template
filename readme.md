@@ -1,150 +1,44 @@
 # WORDPRESS-GULP-BOWER-SASS-JQUERY-BOOTSTRAP STARTER KIT
 
-������� �� ������ https://github.com/synapticism/wordpress-gulp-bower-sass ��������� �������������� ����������� � ����, ��������� jQuery � Bootstrap, ������� Composer, Scut, wp ajax reload � HTML5 history api. 
+Сделано на основе https://github.com/synapticism/wordpress-gulp-bower-sass Полностью русифицированы комментарии в коде, добавлены jQuery и Bootstrap, удалены Composer, Scut, wp-ajax reload и HTML5 history api. 
 
-���������� ���� WordPress ������� �������� �������� ����� ������� � ���������� �������. ������������� �������� ������ ��������� ������������� ������ ��������, ������� �����. ���� ������ ������������ ����� �������� * ������� * ��� ���������� ���������������������� ��� WordPress � Gulp, Bower, Sass, jQuery � Bootstrap.
+Разработка темы WordPress обычным способом отнимает много времени и подвержена ошибкам. Автоматизация процесса сборки позволяет интегрировать лучшие практики, экономя время. Этот проект представляет собой комплект * стартер * для разработки высокооптимизированных тем WordPress с Gulp, Bower, Sass, jQuery и Bootstrap.
 
-��� ������������ ��������� � ������ �� ������ ������� [BrowserSync](http://www.browsersync.io/) ��� [LiveReload](http://livereload.com/)
+Для отслеживания изменений в файлах вы можете выбрать [BrowserSync](http://www.browsersync.io/) или [LiveReload](http://livereload.com/)
 
-## �����������
+## ИНСТАЛЛЯЦИЯ
 
-* [���������� npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm).
-* ���������� Gulp (`npm install gulp -g`) � Bower (`npm install bower -g`).
-* �����������: ���������� Sass � ������� `gem install sass` (������� Ruby) *���* ���������� ���������� Sass ��� `libsass` � ����� ������������.
-* ������� ��� ����������� ���� ����������� � ���������� ��� ����������� � ������� ������� `npm install` (������� ������������� ������� `bower install`). ��� ���� ����� ����������� ��� �����������, ������������� � `package.json` �` bower.json`
-* �������� `gulpconfig.js` � *� ����� �����*, ���������� ���������� `project`, ������� ���������� �������� ����� ����� ����� ����.
-* [BrowserSync](http://www.browsersync.io/) ���������: assuming you have a local development environment setup all you should need to do is enter the URL into the `proxy` setting in `gulpconfig.js`. (Why use BrowserSync? It's fast, awesome, and allows for simultaneous responsive development across multiple devices.)
-* [LiveReload](http://livereload.com/) setup: install a browser extension for [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) or Firefox. (Why use LiveReload? It does the job without complications.)
-* Run `gulp` and start hacking!
+* [Установите npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm).
+* Установите Gulp (`npm install gulp -g`) и Bower (`npm install bower -g`).
+* Опционально: установите Sass с помощью `gem install sass` (требует Ruby) *или* установите компилятор Sass как `libsass` в файле конфигурации.
+* Скачать или клонировать этот репозиторий и установить все зависимости с помощью команды `npm install` (которая автоматически вызовет `bower install`). При этом будут установлены все зависимости, перечисленные в `package.json` и `bower.json`
+* Измените `gulpconfig.js` и *в самом конце*, установите переменную `project`, которая определяет название папки вашей новой темы.
+* [BrowserSync](http://www.browsersync.io/) установка: удостоверьтесь, что BrowserSync установлен локально. Всё что вам нужно сделать, это вставить URL в настройке `proxy` файла `gulpconfig.js`.
+* [LiveReload](http://livereload.com/) настройка: установите расширение для браузера [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) или Firefox.
+* Запустите `gulp` и начинайте разработку!
 
+## РАЗРАБОТКА
 
+Этот стартовый набор содержит папки `src`, `build`, и `dist` для организации разработки:
 
-## VOIDX: A MINIMUM VIABLE THEME
+* `src`: этот каталог содержит исходники для вашей темы: шаблоны (`src/`), языковые файлы (`src/languages`), стили (`src/scss`), скрипты (`src/js`), и изображения (в любом месте `src/`). **Редактируйте файлы только в этом каталоге!**
+* `build`: генерируется Gulp, это *рабочая копия* вашей темы для разработки и тестирования. Предполагается, что папка с исходниками находится внутри каталога `wp-content/` вашей локальной копии WordPress, но вы всегда можете отредактировать пути в файле gulpconfig.js.
+* `dist`: папка продакшена, вы должны запустить в консоли `gulp dist` для её создания, в ней хранится окончательный вариант вашей новой темы.
 
-Previously this project shipped without a working theme included. I figured that with all the great starter themes out there (for instance, [_s](https://github.com/Automattic/_s), [Roots](https://github.com/roots/roots), and [Bones](https://github.com/eddiemachado/bones)) it wouldn't be hard to drop one in and start theming. I don't personally use any of these so I was a little surprised to discover how tricky this can be. Starter themes, despite their "bare bones" reputation, are often bulky and opinionated. Some even ship with their own build processes already in place!
+Помните: папки `build` и `dist` временные и в любой момент могут быть сгенерированы вами заново, поэтому не стоит редактировать файлы внутри них, но вы можете пользоваться ими для выявления своих ошибок.
 
-It seems there is a need for what I'd call a *minimum viable theme*: a truly bare bones WordPress starter theme featuring only the essentials to get up and running, something that you can assess at a glance. For the purposes of this project I have created such a theme, tentatively named `voidx`. It isn't pretty and isn't up to [WordPress standards](https://wordpress.org/plugins/theme-check/) but it works well enough to show off some of the possibilities of Gulp, Bower, and Sass. Feel free to play with or discard it as you wish. All files under `src` can be replaced by your own files, you just have to be sure to wire things up properly in the `gulpconfig.js` file if you swap in your own stuff.
+Tакже есть папка `gulpfile.js`, а в ней `tasks-active`, в которой собраны все задачи для Gulp и разбиты по файлам.
 
-There are two components worth a closer look, however:
+## РАБОТА С GULP
 
-* The script variable and enqueuing functions in `src/inc/assets.php`; these are tightly coupled with the output of the build process.
-* The theme configuration pattern described in `functions.php` and `functions-config-defaults.php`.
+Для старта сборки введите `gulp` в командной строке, это запустит `gulpfile.js/index.js` и создаст рабочую копию, другая команда, которую вы можете использовать это `gulp dist`, которая создаёт копию для продакшена.
 
+Конфигурация хранится в `gulpconfig.js`, скорее всего в ней понадобится изменить только 2 вещи:
 
-
-## ORGANIZATION
-
-This starter kit uses `src`, `build`, and `dist` folders to organize theme development:
-
-* `src`: this directory contains the raw material for your theme: templates (`src/`), PHP includes (`src/inc`), language files (`src/languages`), styles (`src/scss`), scripts (`src/js`), and images (anywhere under `src/`). **Only edit files in this directory!**
-* `build`: generated by Gulp, this is a *working copy* of your theme for use in development and testing. Symlink `build` to your `wp-content/themes` directory for local development and testing (e.g. if your theme is in `~/dev/themes/my-theme` and your local copy of WordPress is installed in `~/dev/localhost/wp` you'll want to run `ln -s ~/dev/themes/my-theme/build ~/dev/localhost/wp/wp-content/themes/my-theme`).
-* `dist`: short for distribution, this will be the final, polished copy of your theme for production. You will need to manually run `gulp dist` to create a new distribution. You can also symlink this directory for a final round of testing; just keep in mind that your theme will now be in `dist/[project]`, where `[project]` is the setting at the top of the Gulp configuration. This project folder is what you will want to deploy to production. (No more weird junk in your themes. Hooray!)
-
-Note: both the `build` and `dist` directories are disposable and can be regenerated from the contents of `src`. You aren't likely to want to edit files in this folders but you may want to open them up to diagnose issues with the build process itself.
-
-There is also a `gulp` folder containing the configuration file and two task directories, active and inactive. All files in the `tasks-active` directory will be required at runtime and available for use.
-
-
-
-## WORKING WITH GULP
-
-[Gulp](http://gulpjs.com/) is an extremely powerful tool for automating tasks from the command line. If you're new to Gulp but coming from a WordPress background I recommend reading tutorials by [Matt Banks](http://mattbanks.me/gulp-wordpress-development/) and [Mark Goodyear](http://markgoodyear.com/2014/01/getting-started-with-gulp/). I also learned a lot from a post by [Dan Trello](http://viget.com/extend/gulp-browserify-starter-faq) (and have integrated much of his approach into this project) but it might be a bit more opaque for newcomers.
-
-To get started try running `gulp` from the command line. This fires `gulpfile.js/index.js` and should build a working copy of the included theme. The other command you will use from time to time is `gulp dist`, which builds a distribution copy.
-
-Configuration is handled by a single file: `gulpconfig.js`. If you leave the directory structure intact there won't be too much that needs changing here but I can think of two non-obvious components you might want to modify or at least look at:
-
-* [BrowserSync](http://www.browsersync.io/) settings: if you are developing on a local web server you will want to enter the URL into `browsersync.proxy` and then change `watch.watcher` to `browsersync` to take it for a test drive. You'll know it's working when you run `gulp` and a new browser opens with a live copy of your web site. Make changes to any of the Sass files and they should be shown on the page almost immediately. Of course, BrowserSync really shines when you connect a mobile device to your development server, but for that you're on your own ;)
-* Script settings: draw your attention to `scripts.bundles` and `scripts.chunks`. This feature is essentially a poor man's [Browserify](http://browserify.org/) or [Webpack](https://webpack.github.io/). By defining different "chunks" (script files that combine to provide a particular feature) and "bundles" (chunks that combine to provide feature sets) you can generate an assortment of files that can be efficiently and intelligently loaded through your WordPress theme. This approach has its limitations, of course, particularly when dependencies are shared between scripts, but it should be of use to many WordPress theme developers.
-
-
-
-## WORKING WITH BOWER
-
-A few handy tips from the [Bower documentation](https://bower.io):
-
-* Find new front-end dependencies with `bower search [package]`.
-* Install new front-end dependencies with: `bower install [package] --save-dev`.
-* Remove packages by deleting a line from `bower.json` and then run `bower prune`.
-* Clean the cache with `bower cache clean` (occasionally needed when things start getting weird).
-
-
-
-## WORKING WITH SASS
-
-* This package now supports either [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass/) (which requires [the original Ruby implementation of Sass](https://github.com/sass/sass)) or [gulp-sass](https://www.npmjs.org/package/gulp-sass) (based on the newer, experimental, and faster [libsass](https://github.com/sass/libsass)). Switch `styles.compiler` as needed! For reference: [Sass compatibility table](https://sass-compatibility.github.io/).
-* [Sass](http://sass-lang.com/) files can be found in `/src/scss`. Gulp will not process Sass partials beginning with `_`; these need to be explicitly imported (see `style.scss` for an example). On the other hand, if you want to output any other CSS files just drop the underscore *e.g.* `editor-style.scss`.
-* Bower components are in the path by default so you can `@import` Sass files directly, as seen in `_loader.scss` and `_reset.scss`.
-* The `build` folder is provisioned with regular and minified versions of all stylesheets but `dist` only contains minified versions for production. This approach allows for easy debugging during development.
-* This starter kit ships with [Normalize.css](https://necolas.github.io/normalize.css/) (active by default) and [Eric Meyer's reset](http://meyerweb.com/eric/tools/css/reset/) (inactive by default).
-* Compass is *not* included as [Autoprefixer](https://github.com/ai/autoprefixer), a [PostCSS](https://github.com/postcss/postcss) plugin, eliminates the need for vendor prefixing (which is what most Sass frameworks focus on these days). Instead I have included [Scut](https://davidtheclark.github.io/scut/), a minimalist library of useful Sass mixins and functions for the post-vendor prefixing era. This is easily removed if you're not interested in using it.
-* [Sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/?redirect_from_locale=tw) are generated by [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) when compiling with libsass.
-
-
-
-## A FEW OTHER NOTES
-
-### Images
-
-Images are copied from wherever they are in `src` to the same location under `build`. They are only optimized when running `gulp dist` as this operation is resource-intensive.
-
-### PHP
-
-Like images, PHP (and language) files can go anywhere under `src` and will be copied to `build` and `dist` while preserving directory structure.
-
-
-
-## A SAMPLE INTEGRATION
-
-Let's say you run across a cool project like [Headroom.js](http://wicky.nillia.ms/headroom.js/) and decide you'd like to try it out. Here's how you would do that with the tools and workflow outlined in this repo:
-
-* `bower install headroom.js -D`. This will save the package to your `bower.json` file.
-* Look up the path to the script and add the appropriate entries to `scripts.bundles` and `scripts.chunks` in `gulpconfig.js`. The key name of `scripts.bundles` should match `$script_name` (below). Since this script is meant to be loaded on every page it is safe to bundle it with the `core` script.
-* To make this script *optional* requires a bit more work:
-    * Add an option to `functions-config-defaults.php`: `defined( 'VOIDX_SCRIPTS_HEADROOM' ) || define( 'VOIDX_SCRIPTS_HEADROOM', true );`.
-    * Add the switch to `inc/assets.php`: `if ( VOIDX_SCRIPTS_HEADROOM ) : $script_name .= '-hr';`.
-    * Add an option to `scss/_config.scss` to allow for the styling to be turned on or off: `$plugin-headroom: true;`.
-    * Add the necessary styling to `scss/_plugins.scss` wrapped in a conditional check: `@if ($plugin-headroom) { // Style }`.
-    * Create an additional script at `src/js/headroom.js` to invoke the main script (code to follow).
-
-```language-javascript
-// Invoke Headroom.js
-;(function($){
-  $(function(){
-    $("#wrap-header").headroom({ offset: 60 });
-  });
-}(jQuery));
-```
-
-That's all there is to it. Now this script can be switched on or off in two configuration files. WordPress will automatically load the correct script bundle for all JavaScript-based functionality (rather than loading lots of little scripts for each feature).
-
-
-
-## TO DO
-
-* Yeoman generator ([open issue](https://github.com/synapticism/wordpress-gulp-bower-sass/issues/1); [some help here](http://yeoman.io/authoring/) would be awesome since I don't personally use Yeoman).
-* A proper wipe/clean task chain (waiting for Gulp 4).
-* Better error handling (waiting for Gulp 4).
-* [Reduce unnecessary wrapper plugins](https://github.com/sogko/gulp-recipes/tree/master/unnecessary-wrapper-gulp-plugins).
-* RTL support with [gulp-rtlcss](https://github.com/jjlharrison/gulp-rtlcss)?
-* Explore using Gulp for I18n (a quick scan revealed nothing obviously useful).
-
-Feature requests and bug reports welcome; [open an issue](https://github.com/synapticism/wordpress-gulp-bower-sass/issues)! Please note that I intend to reign in scope creep on this project :)
-
-
-
-## SEE ALSO
-
-Like the approach but prefer something more mature, sophisticated, and opinionated? Check out [Sage](https://roots.io/sage/) and [Bedrock](https://github.com/roots/bedrock) from [Roots](http://roots.io/).
-
-
-
-## CREDITS
-
-The initial version of this repo featured a `gulpfile.js` adapted from [Matt Banks](http://mattbanks.me/gulp-wordpress-development/). Additional credit is due to [Mark Goodyear](http://markgoodyear.com/2014/01/getting-started-with-gulp/). The current version is largely based on Dan Tello's excellent [gulp-starter](https://github.com/greypants/gulp-starter). The theme templates included in this project ultimately descend from Twenty Twelve.
-
-
-
-## LICENSE
-
-Licensed under the [GPL 3.0](http://www.gnu.org/licenses/gpl.txt). You are encouraged to link back to [my web site](http://synapticism.com), [development blog](http://synapticism.com/dev), and/or [this GitHub repository](https://github.com/synapticism/wordpress-gulp-bower-sass) if you find this at all useful.
+* [BrowserSync](http://www.browsersync.io/) настройки: если вы ведёте разработку на локальном сервере, вставьте URL сайта в `browsersync.proxy` а затем измените `watch.watcher` на `browsersync`. Когда вы запустите `gulp`, браузер откроется с копией вашего сайта, но адрес будет localhost:8080. Редактируйте файлы Sass и изменения будут видны сразу.
+* Настройки скриптов: в `scripts.bundles` определяют зависимости и имя конечного файла, в `scripts.chunks` помещаются пути к исходным файлам, вы также можете разделить файлы, для этого в `scripts.bundles` создайте для каждого файла своё свойство в объекте, например так:
+`
+jquery: ['jquery'],
+bootstrap: ['bootstrap'],
+main: ['main']
+`
