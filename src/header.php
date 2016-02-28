@@ -14,13 +14,13 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="col-xs-12 col-sm-3 col-md-3">
 					<a href="<?php echo site_url(); ?>" class="logo"><span class="logo__smart">Smart</span><span
 							class="logo__freelancer">freelancer</span></a>
 				</div>
 				<?php wp_nav_menu(array(
 					'theme_location' => 'header-menu',
-					'container_class' => 'col-xs-12 col-sm-7 col-md-8',
+					'container_class' => 'col-xs-12 col-sm-8 col-md-8',
 					'container' => 'nav',
 					'menu_class' => 'nav nav-pills header-menu-custom',
 					'menu_id' => 'topmenu'

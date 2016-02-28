@@ -21,7 +21,7 @@ function voidx_setup() {
     wp_enqueue_style( 'main-style', get_stylesheet_uri() );
   }
   // Подключаем основной файл скриптов в <head>
-  wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js' );
+  wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', array(), false, true );
 
   // $content_width ограничивает максимальную ширину изображений, загружаемых через визуальный редактор
   // Должен быть установлен единожды; Ничего с ним не делайте, это часть ядра WordPress
@@ -31,20 +31,6 @@ function voidx_setup() {
 }
 
 add_action( 'after_setup_theme', 'voidx_setup', 11 );
-
-// Подключение сайдбара
-function voidx_widgets_init() {
-  register_sidebar( array(
-    'name'          => __( 'Main sidebar', 'voidx' ),
-    'id'            => 'sidebar-main',
-    'description'   => __( 'Подключается в тему WordPress.', 'voidx' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h2>',
-    'after_title'   => '</h2>'
-  ) );
-}
-add_action( 'widgets_init', 'voidx_widgets_init' );
 
 // Регистрируем меню
 function register_my_menus() {

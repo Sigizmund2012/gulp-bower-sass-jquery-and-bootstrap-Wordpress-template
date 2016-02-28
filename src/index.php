@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-    <main role="main">
-		
-    </main>
+<?php get_sidebar( 'mainslider' ); ?>
+
 <?php get_footer(); ?>
