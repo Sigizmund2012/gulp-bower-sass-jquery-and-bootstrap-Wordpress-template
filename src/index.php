@@ -1,21 +1,28 @@
 <?php get_header(); ?>
 
-	<div class="container-fluid">
+	<div class="container-fluid services-wrapper">
 		<div class="row">
 			<div class="container">
 				<div class="row">
+					<?php
+					$category_services = get_category(194);
+					$url = home_url();
+					?>
 					<div class="col-xs-12">
-						<?php
-						$category_services = get_category(194);
-						$url = home_url();
-						?>
-						<div class="services-cat">
-							<h1>Услуги, которые вы можете заказать у меня</h1>
-							<p class="service-cat__description"><?php echo $category_services->description ?>
-								<a href="<?php echo $url . "/category/" . $category_services->slug . "/" ?>" class="services-cat__link">Полный список
-								</a>
-							</p>
-						</div>
+							<div class="services-cat clearfix">
+							<div class="col-sm-9">
+								<h1 class="services-cat__heading">Услуги, которые вы можете заказать у меня</h1>
+								<p class="services-cat__description"><?php echo $category_services->description ?>
+								</p>
+							</div>
+							<div class="col-sm-3">
+								<div class="services-cat__link-wrapper">
+									<a href="<?php echo $url . "/category/" . $category_services->slug . "/" ?>"
+									   class="services-cat__link">Весь&nbsp;список
+									</a>
+								</div>
+							</div>
+							</div>
 					</div>
 				</div>
 				<div class="row">
@@ -37,16 +44,15 @@
 									<?php
 									$postcontent = $post->post_content;
 									$string_width = 200; // limit of string characters
-									if (strlen( $postcontent ) > $string_width)
-									{
-										 $postcontent = wordwrap( $postcontent, $string_width );
-										 $postcontent = substr( $postcontent, 0, strpos( $postcontent, "\n"));
+									if (strlen($postcontent) > $string_width) {
+										$postcontent = wordwrap($postcontent, $string_width);
+										$postcontent = substr($postcontent, 0, strpos($postcontent, "\n"));
 									}
 									echo $postcontent;
 									?>
 								</div>
 								<div class="post-service__link">
-								<a href="<?php the_permalink(); ?>" class="post-service__link_anchor">Подробнее</a>
+									<a href="<?php the_permalink(); ?>" class="post-service__link-anchor">Подробнее</a>
 								</div>
 							</section>
 						</div>
