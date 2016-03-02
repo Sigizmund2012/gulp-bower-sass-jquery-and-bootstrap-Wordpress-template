@@ -37,8 +37,17 @@ function register_my_menus() {
 	register_nav_menus(
 		array(
 			'header-menu' => __( 'Header Menu' ),
-			'footer-menu' => __( 'Footer Menu' )
+			'footer-menu-services' => __( 'Footer Menu Services' ),
+			'footer-menu-portfolio' => __( 'Footer Menu Portfolio' )
 		)
 	);
 }
 add_action( 'init', 'register_my_menus' );
+
+// Добавляем поддержку миниатюр
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 150, 150, true ); // Размер миниатюр по-умолчанию 150 на 150 пикселей
+	// добавочные размеры картинок
+	add_image_size( 'footer-blog-thumb', 70, 70 ); // для вывода в футере записей из блога
+}

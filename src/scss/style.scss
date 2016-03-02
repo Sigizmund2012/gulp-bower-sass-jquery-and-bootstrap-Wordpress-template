@@ -34,6 +34,10 @@ Version: 1.0.0
 
 // Всё остальное
 
+html{
+  overflow-x: hidden;
+}
+
 /* Header */
 
 .header_general{
@@ -226,6 +230,249 @@ Version: 1.0.0
   }
 }
 
+/* Advantages */
+
+.whyme-wrapper{
+  background: $whyme-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.whyme{
+  padding: 0 0 20px;
+  &__heading{
+    color: $whyme-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  &__description{
+    color: $whyme-description-color;
+    font-family: open-sans, sans-serif;
+    font-size: 13px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+.choose-me{
+  &__heading{
+    color: $advantages-headings-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__list{
+    list-style-image: url("img/advantages-list-bullet.png");
+    &-item{
+      color: $advantages-text-color;
+      font-family: open-sans, sans-serif;
+      font-size: 13px;
+    }
+  }
+}
+
+.advantages{
+  color: $advantages-text-color;
+  font-family: open-sans, sans-serif;
+  font-size: 13px;
+}
+
+.clients-say{
+  &__heading{
+    color: $advantages-headings-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__mention{
+    color: $advantages-text-color;
+    background: $advantages-mention-color-bg;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "OpenSans", sans-serif;
+    font-size: 13px;
+    font-style: italic;
+  }
+}
+
+/* Footer */
+
+.footer-general{
+  background: $main-color url("img/footer-bg.png") repeat-x top;
+}
+
+.information{
+  margin: 40px 0;
+  &__smart,
+  &__freelancer{
+    color: $footer-main-text-color;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+  }
+  &__smart{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &__freelancer{
+    font-size: 25px;
+  }
+  &__text{
+    color: $footer-main-text-color;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    margin: 30px 0;
+  }
+  &__email{
+    &-text,
+    &-link{
+      color: $footer-main-text-color;
+      font-family: "Open Sans", sans-serif;
+    }
+    &-text{
+      font-size: 13px;
+    }
+    &-link{
+      font-size: 20px;
+      font-weight: bold;
+      font-style: italic;
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
+.footer-services{
+  margin: 40px 0;
+  padding: 10px 0;
+  &__heading{
+    opacity: .5;
+    color: $footer-headings-color;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__nav-wrapper{
+    margin: 30px 0;
+  }
+  &__list{
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style-image: url("img/footer-list-bullet.png");
+    & a{
+      color: $footer-main-text-color;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+    }
+  }
+}
+
+.footer-portfolio{
+  margin: 40px 0;
+  padding: 10px 0;
+  &__heading{
+    opacity: .5;
+    color: $footer-headings-color;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__nav-wrapper{
+    margin: 30px 0;
+  }
+  &__list{
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style-image: url("img/footer-list-bullet.png");
+    & a{
+      color: $footer-main-text-color;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+    }
+  }
+}
+
+.from-the-blog{
+  margin: 40px 0 0;
+  padding: 10px 0;
+  &__posts,
+  &__blog{
+    color: $footer-main-text-color;
+    font-family: "OpenSans", sans-serif;
+  }
+  &__posts{
+    font-size: 20px;
+    font-style: italic;
+  }
+  &__blog{
+    font-size: 20px;
+    font-style: bold;
+    margin: 0 0 0 5px;
+    text-transform: uppercase;
+  }
+  &__list{
+    padding: 30px 0;
+  }
+  &__image{
+    margin: 0 0 20px;
+    border-radius: 5px;
+  }
+  &__title{
+    & a{
+      color: $footer-main-text-color;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+    }
+  }
+  &__date{
+    opacity: .5;
+    color: $footer-date-color;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+  }
+}
+
+.footer-bottom{
+  background: $footer-bottom-color-bg;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer-sitedata{
+  color: $footer-main-text-color;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  &__year{
+    margin: 0 5px 0;
+  }
+  &__text{}
+}
+
+.footer-social{
+  font-family: awesome;
+  font-size: 18px;
+  &__twitter{
+    margin: 0 20px 0 0;
+    & a{
+      color: $footer-main-text-color;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__rss{
+    & a{
+      color: $footer-main-text-color;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 @import "sidebar";
 
 /* Media-queries */
@@ -240,6 +487,7 @@ Version: 1.0.0
       font-size: 30px;
     }
   }
+  /* Services */
   .services-cat{
     &__description{
       font-size: 16px;
@@ -256,6 +504,37 @@ Version: 1.0.0
       }
     }
   }
+  /* Advantages */
+  .whyme{
+    &__heading{
+      font-size: 25px;
+    }
+  }
+  /* Footer */
+  .information{
+    margin: 40px 0 0;
+    &__text{
+      margin: 10px 0;
+    }
+  }
+  .footer-services{
+    margin: 0;
+    &__nav-wrapper{
+      margin: 10px 0 0;
+    }
+  }
+  .footer-portfolio{
+    margin: 0;
+    &__nav-wrapper{
+      margin: 10px 0 0;
+    }
+  }
+  .from-the-blog{
+    margin: 0;
+    &__list{
+      padding: 10px 0 0;
+    }
+  }
 }
 // Tablets
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
@@ -268,6 +547,7 @@ Version: 1.0.0
 
     }
   }
+  /* Services */
   .services-cat{
     padding: 20px;
     &__heading{
@@ -292,10 +572,24 @@ Version: 1.0.0
       }
     }
   }
+  /* Footer */
+  .footer-portfolio{
+    margin: 0;
+  }
+  .from-the-blog{
+    margin: 0;
+  }
+  .information{
+    margin: 40px 0 0;
+  }
+  .footer-services{
+    margin: 40px 0 0;
+  }
 }
 
 // Notebooks
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+  /* Services */
   .services-cat{
     padding: 20px;
     &__heading{
