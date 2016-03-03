@@ -40,6 +40,13 @@ html{
   min-height: 100%;
 }
 
+body{
+  background: $page-content-color-bg;
+  color: $page-text-color;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
 /* Header */
 
 .header_general{
@@ -424,6 +431,8 @@ html{
   &__image{
     margin: 0 0 20px;
     border-radius: 5px;
+    border: 1px solid #5e9f9a;
+    box-shadow: 2px 2px 4px #5e9f9a;
   }
   &__title{
     & a{
@@ -478,7 +487,26 @@ html{
   }
 }
 
-@import "sidebar";
+/* Page */
+
+.content-top{
+  background: $page-heading-color-bg;
+  &__heading{
+    margin: 25px 0;
+    color: $page-heading-color;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.page-text{
+  color: $page-text-color;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 20px 0;
+}
 
 /* Media-queries */
 
