@@ -36,6 +36,8 @@ Version: 1.0.0
 
 html{
   overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
 }
 
 /* Header */
@@ -304,6 +306,9 @@ html{
 
 .footer-general{
   background: $main-color url("img/footer-bg.png") repeat-x top;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .information{

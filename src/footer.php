@@ -92,7 +92,7 @@
 				</div>
 				<div class="col-md-2 col-md-offset-8 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-0">
 					<div class="footer-social">
-						<span class="footer-social__twitter"><a href="https://twitter.com/Sigizmund_RF"></a></span>
+						<span class="footer-social__twitter"><a href=""></a></span>
 						<span class="footer-social__rss"><a href="/feed/"></a></span>
 					</div>
 				</div>
