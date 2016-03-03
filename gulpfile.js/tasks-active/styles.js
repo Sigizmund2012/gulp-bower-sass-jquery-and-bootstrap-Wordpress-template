@@ -16,7 +16,7 @@ gulp.task('styles-ruby-sass', function() {
   .pipe(plugins.postcss([autoprefixer(config.autoprefixer)])) // Расставляет вендорные префиксы
   .pipe(gulp.dest(config.build.dest)) // Помещает не минимизированный файл в папку `build`
   .pipe(plugins.rename(config.rename))
-  .pipe(plugins.minifyCss(config.minify))
+  .pipe(plugins.cleanCss(config.minify))
   .pipe(gulp.dest(config.build.dest)); // Помещает минимизированный файл в папку `build` для отладки
 });
 
@@ -30,7 +30,7 @@ gulp.task('styles-libsass', function() {
   .pipe(gulp.dest(config.build.dest)) // // Помещает не минимизированный файл в папку `build`
   .pipe(plugins.rename(config.rename))
   .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.minifyCss(config.minify))
+    .pipe(plugins.cleanCss(config.minify))
   .pipe(plugins.sourcemaps.write('./')) // Пишет внешнюю sourcemap
   .pipe(gulp.dest(config.build.dest)); // // Помещает минимизированный файл в папку `build` для отладки
 });
@@ -39,7 +39,7 @@ gulp.task('styles-libsass', function() {
 gulp.task('styles-dist', ['utils-dist'], function() {
   return gulp.src(config.dist.src)
   .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.minifyCss(config.minify))
+    .pipe(plugins.cleanCss(config.minify))
   .pipe(plugins.sourcemaps.write('./')) // Пишет внешнюю sourcemap
   .pipe(gulp.dest(config.dist.dest));
 });

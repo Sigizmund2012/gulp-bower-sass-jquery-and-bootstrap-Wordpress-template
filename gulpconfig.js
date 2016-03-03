@@ -93,7 +93,7 @@ module.exports = {
     compiler: 'libsass', // Выбор компилятора Sass: 'libsass' или 'ruby-sass'
     autoprefixer: { browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4'] }, 
     rename: { suffix: '.min' }, 
-    minify: { keepSpecialComments: 1, roundingPrecision: 3 }, 
+    minify: { keepSpecialComments: 1, roundingPrecision: 3 },
     rubySass: { // Требует Ruby для обработки Sass; запустите `gem install sass` если вы его используете; Compass по-умолчанию не включён
       loadPath: bower, // Добавляет папку `bower_components` в путь загрузки, вы можете использовать @import без указания полного пути
       precision: 6,
