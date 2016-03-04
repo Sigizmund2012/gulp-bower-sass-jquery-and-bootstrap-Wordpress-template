@@ -12,9 +12,9 @@ var project     = 'smart',
 module.exports = {
 
   bower: {
-    bootstrap: { // Копирует папку `bootstrap-sass/assets/stylesheets/` из `bower_components` в `src`
+    bootstrap: { // Копирует папку `bootstrap-sass/assets/stylesheets/` из `bower_components` в `src/scss/vendor/`
       src: bower + 'bootstrap-sass/assets/stylesheets/**/*',
-      dest: src + 'scss/'
+      dest: src + 'scss/vendor/'
     },
 	fonts: {
 		awesome: {

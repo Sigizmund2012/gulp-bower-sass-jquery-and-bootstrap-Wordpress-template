@@ -32,7 +32,3 @@ sitemap.xml.gz
 .sass-cache
 bower_components
 node_modules
-vendor
-build
-dist
-_normalize.scss

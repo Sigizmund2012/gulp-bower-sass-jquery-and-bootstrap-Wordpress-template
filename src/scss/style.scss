@@ -30,7 +30,7 @@ Version: 1.0.0
 @include font-face(awesome, fontawesome-webfont)
 
 // Подключаем Bootstrap
-@import "_bootstrap.scss";
+@import "vendor/_bootstrap.scss";
 
 // Всё остальное
 
