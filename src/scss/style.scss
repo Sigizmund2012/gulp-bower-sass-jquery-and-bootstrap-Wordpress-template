@@ -43,7 +43,7 @@ html{
 body{
   background: $page-content-color-bg;
   color: $page-text-color;
-  font-family: "Open Sans", sans-serif;
+  font-family: open-sans, sans-serif;
   font-size: 16px;
 }
 
@@ -303,7 +303,7 @@ body{
     background: $advantages-mention-color-bg;
     padding: 10px;
     border-radius: 5px;
-    font-family: "OpenSans", sans-serif;
+    font-family: open-sans, sans-serif;
     font-size: 13px;
     font-style: italic;
   }
@@ -323,7 +323,7 @@ body{
   &__smart,
   &__freelancer{
     color: $footer-main-text-color;
-    font-family: "Open Sans", sans-serif;
+    font-family: open-sans, sans-serif;
     text-transform: uppercase;
   }
   &__smart{
@@ -335,7 +335,7 @@ body{
   }
   &__text{
     color: $footer-main-text-color;
-    font-family: "Open Sans", sans-serif;
+    font-family: open-sans, sans-serif;
     font-size: 13px;
     margin: 30px 0;
   }
@@ -343,7 +343,7 @@ body{
     &-text,
     &-link{
       color: $footer-main-text-color;
-      font-family: "Open Sans", sans-serif;
+      font-family: open-sans, sans-serif;
     }
     &-text{
       font-size: 13px;
@@ -363,7 +363,7 @@ body{
   &__heading{
     opacity: .5;
     color: $footer-headings-color;
-    font-family: "Open Sans", sans-serif;
+    font-family: open-sans, sans-serif;
     font-size: 20px;
     font-weight: bold;
   }
@@ -376,7 +376,7 @@ body{
     list-style-image: url("img/footer-list-bullet.png");
     & a{
       color: $footer-main-text-color;
-      font-family: "Open Sans", sans-serif;
+      font-family: open-sans, sans-serif;
       font-size: 13px;
     }
   }
@@ -388,7 +388,7 @@ body{
   &__heading{
     opacity: .5;
     color: $footer-headings-color;
-    font-family: "Open Sans", sans-serif;
+    font-family: open-sans, sans-serif;
     font-size: 20px;
     font-weight: bold;
   }
@@ -401,7 +401,7 @@ body{
     list-style-image: url("img/footer-list-bullet.png");
     & a{
       color: $footer-main-text-color;
-      font-family: "Open Sans", sans-serif;
+      font-family: open-sans, sans-serif;
       font-size: 13px;
     }
   }
@@ -413,7 +413,7 @@ body{
   &__posts,
   &__blog{
     color: $footer-main-text-color;
-    font-family: "OpenSans", sans-serif;
+    font-family: open-sans, sans-serif;
   }
   &__posts{
     font-size: 20px;
@@ -431,20 +431,20 @@ body{
   &__image{
     margin: 0 0 20px;
     border-radius: 5px;
-    border: 1px solid #5e9f9a;
-    box-shadow: 2px 2px 4px #5e9f9a;
+    border: 1px solid $footer-blog-images-border-and-shadow-color;
+    box-shadow: 2px 2px 4px $footer-blog-images-border-and-shadow-color;
   }
   &__title{
     & a{
       color: $footer-main-text-color;
-      font-family: "Open Sans", sans-serif;
+      font-family: open-sans, sans-serif;
       font-size: 13px;
     }
   }
   &__date{
     opacity: .5;
     color: $footer-date-color;
-    font-family: "Open Sans", sans-serif;
+    font-family: open-sans, sans-serif;
     font-size: 13px;
   }
 }
@@ -457,7 +457,7 @@ body{
 
 .footer-sitedata{
   color: $footer-main-text-color;
-  font-family: "Open Sans", sans-serif;
+  font-family: open-sans, sans-serif;
   font-size: 12px;
   &__year{
     margin: 0 5px 0;
@@ -494,7 +494,7 @@ body{
   &__heading{
     margin: 25px 0;
     color: $page-heading-color;
-    font-family: "Open Sans", sans-serif;
+    font-family: open-sans, sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -503,9 +503,129 @@ body{
 
 .page-text{
   color: $page-text-color;
-  font-family: "Open Sans", sans-serif;
+  font-family: open-sans, sans-serif;
   font-size: 16px;
   padding: 20px 0;
+}
+
+/* Blog category page */
+
+.blog-heading{
+  padding: 20px 0;
+  &__title{
+    color: $blog-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &_wrapper{
+    background: $blog-heading-wrapper-color-bg;
+  }
+}
+
+.posts-blog_wrapper{
+  padding-top: 40px;
+}
+
+.post-date{
+  border-radius: 5px;
+  padding: 10px;
+  background: $blog-date-color-bg;
+  border: 1px solid $blog-date-border-color;
+  box-shadow: 3px 3px 6px $blog-date-box-shadow-color;
+  &__month,
+  &__day,
+  &__year{
+    text-align: center;
+    color: $blog-date-text-color;
+    font-family: open-sans, sans-serif;
+  }
+  &__month{
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  &__day{
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.post-blog{
+  &_general{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  &__image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid $blog-post-image-border-color;
+    box-shadow: 3px 3px 6px $blog-post-image-box-shadow-color;
+  }
+  &__heading{
+    margin: 0;
+    &_link{
+      font-family: open-sans, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      &,
+      &:hover{
+        color: $blog-post-heading-link-color;
+      }
+    }
+  }
+  &__readmore{
+    &_link{
+      font-family: open-sans, sans-serif;
+      font-size: 14px;
+      &,
+      &:hover,
+      &:after{
+        color: $blog-readmore-link-color;
+      }
+      &:after{
+        margin: 0 0 0 10px;
+        content: "";
+        font-family: awesome;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.blog-navigation{
+  & .screen-reader-text{
+    display: none;
+  }
+  & .page-numbers{
+    display: inline-block;
+    color: $main-link-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: $blog-navigation-number-color-bg;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-bottom: 1px solid $blog-navigation-number-border-color;
+    transition: all 0.5s;
+    &:hover{
+      text-decoration: none;
+      background: $blog-navigation-number-hover-color-bg;
+      border-bottom: 1px solid $blog-navigation-number-hover-border-color;
+      transition: all 0.5s;
+    }
+    &.current{
+      background: $blog-navigation-number-current-color-bg;
+      border-bottom: 1px solid $blog-navigation-number-current-border-color;
+    }
+  }
+  & .next,
+  & .prev{
+    font-family: awesome;
+    font-weight: normal;
+  }
 }
 
 /* Media-queries */
@@ -519,6 +639,9 @@ body{
     &__freelancer{
       font-size: 30px;
     }
+  }
+  .header-menu-custom{
+    padding: 0 10px;
   }
   /* Services */
   .services-cat{
@@ -617,6 +740,15 @@ body{
   }
   .footer-services{
     margin: 40px 0 0;
+  }
+  /* Blog category page */
+  .post-date{
+    &__month{
+      font-size: 12px;
+    }
+    &__day{
+      font-size: 24px;
+    }
   }
 }
 

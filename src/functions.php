@@ -50,4 +50,19 @@ if ( function_exists( 'add_theme_support' ) ) {
 	set_post_thumbnail_size( 150, 150, true ); // Размер миниатюр по-умолчанию 150 на 150 пикселей
 	// добавочные размеры картинок
 	add_image_size( 'footer-blog-thumb', 70, 70 ); // для вывода в футере записей из блога
+	add_image_size( 'blog-thumb', 300, 200 ); // для вывода записей из блога
 }
+
+// Размер предисловия записи на странице рубрики
+function smart_excerpt_length($length) {
+	return 40; // 40 слов
+}
+add_filter('excerpt_length', 'smart_excerpt_length');
+
+// Добавляем noindex,nofollow на 404 странице
+function smart_404_noindex () {
+	if (is_404()) {
+		echo "".'<meta name="robots" content="noindex,nofollow" />'."\n";
+	}
+}
+add_action('wp_head', 'smart_404_noindex', 3); // добавляем свой noindex,nofollow в head
