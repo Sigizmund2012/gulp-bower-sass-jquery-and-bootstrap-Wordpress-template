@@ -1,0 +1,20 @@
+/* Page */
+
+.content-top{
+  background: $page-heading-color-bg;
+  &__heading{
+    margin: 25px 0;
+    color: $page-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.page-text{
+  color: $page-text-color;
+  font-family: open-sans, sans-serif;
+  font-size: 16px;
+  padding: 20px 0;
+}

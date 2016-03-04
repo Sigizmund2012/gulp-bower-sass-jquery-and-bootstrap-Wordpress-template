@@ -1,0 +1,69 @@
+/* Advantages */
+
+.whyme-wrapper{
+  background: $whyme-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.whyme{
+  padding: 0 0 20px;
+  &__heading{
+    color: $whyme-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  &__description{
+    color: $whyme-description-color;
+    font-family: open-sans, sans-serif;
+    font-size: 13px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+.choose-me{
+  &__heading{
+    color: $advantages-headings-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__list{
+    list-style-image: url("img/advantages-list-bullet.png");
+    &-item{
+      color: $advantages-text-color;
+      font-family: open-sans, sans-serif;
+      font-size: 13px;
+    }
+  }
+}
+
+.advantages{
+  color: $advantages-text-color;
+  font-family: open-sans, sans-serif;
+  font-size: 13px;
+}
+
+.clients-say{
+  &__heading{
+    color: $advantages-headings-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__mention{
+    color: $advantages-text-color;
+    background: $advantages-mention-color-bg;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: open-sans, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+  }
+}

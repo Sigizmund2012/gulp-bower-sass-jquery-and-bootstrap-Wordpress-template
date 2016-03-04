@@ -1,0 +1,153 @@
+/* Media-queries */
+
+// Phones
+@media (max-width: $screen-xs-max) {
+  .logo{
+    &__smart{
+      font-size: 40px;
+    }
+    &__freelancer{
+      font-size: 30px;
+    }
+  }
+  .header-menu-custom{
+    padding: 0 10px;
+  }
+  /* Services */
+  .services-cat{
+    &__description{
+      font-size: 16px;
+    }
+  }
+  .post-service{
+    margin: 0 0 40px;
+    &__link{
+      bottom: -10px;
+      left: 100px;
+      &-anchor{
+        padding: 10px 30px;
+        font-size: 14px;
+      }
+    }
+  }
+  /* Advantages */
+  .whyme{
+    &__heading{
+      font-size: 25px;
+    }
+  }
+  /* Footer */
+  .information{
+    margin: 40px 0 0;
+    &__text{
+      margin: 10px 0;
+    }
+  }
+  .footer-services{
+    margin: 0;
+    &__nav-wrapper{
+      margin: 10px 0 0;
+    }
+  }
+  .footer-portfolio{
+    margin: 0;
+    &__nav-wrapper{
+      margin: 10px 0 0;
+    }
+  }
+  .from-the-blog{
+    margin: 0;
+    &__list{
+      padding: 10px 0 0;
+    }
+  }
+}
+// Tablets
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+  .logo{
+    &__smart{
+      font-size: 24px;
+    }
+    &__freelancer{
+      font-size: 18px;
+
+    }
+  }
+  /* Services */
+  .services-cat{
+    padding: 20px;
+    &__heading{
+      font-size: 22px;
+    }
+    &__description{
+      font-size: 14px;
+    }
+    &__link{
+      font-size: 14px;
+      padding: 15px 24px;
+    }
+  }
+  .post-service{
+    margin: 0 0 40px;
+    &__link{
+      bottom: -10px;
+      left: 100px;
+      &-anchor{
+        padding: 10px 30px;
+        font-size: 14px;
+      }
+    }
+  }
+  /* Footer */
+  .footer-portfolio{
+    margin: 0;
+  }
+  .from-the-blog{
+    margin: 0;
+  }
+  .information{
+    margin: 40px 0 0;
+  }
+  .footer-services{
+    margin: 40px 0 0;
+  }
+  /* Blog category page */
+  .post-date{
+    &__month{
+      font-size: 12px;
+    }
+    &__day{
+      font-size: 24px;
+    }
+  }
+}
+
+// Notebooks
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+  /* Services */
+  .services-cat{
+    padding: 20px;
+    &__heading{
+      font-size: 30px;
+    }
+    &__description{
+      font-size: 13px;
+    }
+    &__link{
+      font-size: 16px;
+      padding: 15px 30px;
+    }
+  }
+  .post-service{
+    &__link{
+      bottom: -10px;
+      left: 32px;
+      &-anchor{
+        padding: 10px 30px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+// Desktop
+@media (min-width: $screen-lg-min) {}

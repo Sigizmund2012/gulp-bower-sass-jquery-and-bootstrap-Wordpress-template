@@ -1,0 +1,119 @@
+/* Blog category page */
+
+.blog-heading{
+  padding: 20px 0;
+  &__title{
+    color: $blog-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &_wrapper{
+    background: $blog-heading-wrapper-color-bg;
+  }
+}
+
+.posts-blog_wrapper{
+  padding-top: 40px;
+}
+
+.post-date{
+  border-radius: 5px;
+  padding: 10px;
+  background: $blog-date-color-bg;
+  border: 1px solid $blog-date-border-color;
+  box-shadow: 3px 3px 6px $blog-date-box-shadow-color;
+  &__month,
+  &__day,
+  &__year{
+    text-align: center;
+    color: $blog-date-text-color;
+    font-family: open-sans, sans-serif;
+  }
+  &__month{
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  &__day{
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.post-blog{
+  &_general{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  &__image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid $blog-post-image-border-color;
+    box-shadow: 3px 3px 6px $blog-post-image-box-shadow-color;
+  }
+  &__heading{
+    margin: 0;
+    &_link{
+      font-family: open-sans, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      &,
+      &:hover{
+        color: $blog-post-heading-link-color;
+      }
+    }
+  }
+  &__readmore{
+    &_link{
+      font-family: open-sans, sans-serif;
+      font-size: 14px;
+      &,
+      &:hover,
+      &:after{
+        color: $blog-readmore-link-color;
+      }
+      &:after{
+        margin: 0 0 0 10px;
+        content: "";
+        font-family: awesome;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.blog-navigation{
+  & .screen-reader-text{
+    display: none;
+  }
+  & .page-numbers{
+    display: inline-block;
+    color: $main-link-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: $blog-navigation-number-color-bg;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-bottom: 1px solid $blog-navigation-number-border-color;
+    transition: all 0.5s;
+    &:hover{
+      text-decoration: none;
+      background: $blog-navigation-number-hover-color-bg;
+      border-bottom: 1px solid $blog-navigation-number-hover-border-color;
+      transition: all 0.5s;
+    }
+    &.current{
+      background: $blog-navigation-number-current-color-bg;
+      border-bottom: 1px solid $blog-navigation-number-current-border-color;
+    }
+  }
+  & .next,
+  & .prev{
+    font-family: awesome;
+    font-weight: normal;
+  }
+}
