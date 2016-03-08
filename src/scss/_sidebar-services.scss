@@ -32,7 +32,7 @@
     padding: 15px 40px;
     text-transform: uppercase;
     display: table-cell;
-    transition: all 0.5s;
+    transition: background 0.5s,box-shadow 0.5s;
     box-shadow: 0 2px $services-box-shadow-link-hover-color;
     &-wrapper{
       display: table;
@@ -41,7 +41,7 @@
       text-decoration: none;
       color: $main-link-color;
       background: $main-color;
-      transition: all 0.5s;
+      transition: background 0.5s, box-shadow 0.5s;
       box-shadow: 0 2px $services-box-shadow-link-color;
     }
   }
@@ -51,16 +51,16 @@
   background: $services-post-bg;
   padding: 40px 15px 80px;
   border-radius: 5px;
-  transition: all 0.5s;
+  transition: background 0.5s;
   position: relative;
   box-shadow: 0 2px $services-box-shadow-color;
   &:hover{
     background: $services-post-bg-hover;
-    transition: all 0.5s;
+    transition: background 0.5s;
   }
   &:hover > &__icon{
     color: $services-icons-hover-color;
-    transition: all 0.5s;
+    transition: color 0.5s;
   }
   &__icon{
     color: $services-icons-color;
@@ -68,7 +68,7 @@
     font-family: awesome;
     font-size: 60px;
     margin: 0 0 80px;
-    transition: all 0.5s;
+    transition: color 0.5s;
     &_number{
       &_1:before,
       &_2:before,
@@ -122,7 +122,7 @@
       &,
       &:hover{
         color: $services-post-link-color;
-        transition: all 0.5s;
+        transition: background 0.5s,box-shadow 0.5s;
       }
       &:hover{
         text-decoration: none;

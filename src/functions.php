@@ -51,6 +51,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	// добавочные размеры картинок
 	add_image_size( 'footer-blog-thumb', 70, 70 ); // для вывода в футере записей из блога
 	add_image_size( 'blog-thumb', 300, 200 ); // для вывода записей из блога
+	add_image_size( 'category-thumb', 300, 200 ); // для вывода записей из дефолтной рубрики
 }
 
 // Размер предисловия записи на странице рубрики
@@ -66,3 +67,43 @@ function smart_404_noindex () {
 	}
 }
 add_action('wp_head', 'smart_404_noindex', 3); // добавляем свой noindex,nofollow в head
+
+// Функция, формирующая список комментариев
+function smart_comment($comment, $args, $depth) {
+	if ( 'div' === $args['style'] ) {
+		$tag       = 'div';
+		$add_below = 'comment';
+	} else {
+		$tag       = 'li';
+		$add_below = 'div-comment';
+	}
+	?>
+	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? 'comments-list__child' : 'comments-list__item' ) ?> id="comment-<?php comment_ID() ?>">
+	<?php if ( 'div' != $args['style'] ) : ?>
+		<div id="div-comment-<?php comment_ID() ?>" class="comments-list__comment-body">
+	<?php endif; ?>
+	<div class="comments-list__author">
+		<?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+		<?php printf( __( '<div class="comments-list__author-link">%s</div>' ), get_comment_author_link() ); ?>
+		<div class="comments-list__commentmetadata hidden-xs"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+				<?php
+				/* translators: 1: date, 2: time */
+				printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+			?>
+		</div>
+		<div class="comments-list__reply">
+			<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+		</div>
+	</div>
+	<?php if ( $comment->comment_approved == '0' ) : ?>
+		<em class="comments-list__awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+		<br />
+	<?php endif; ?>
+
+	<div class="comments-list__comment-text"><?php comment_text(); ?></div>
+
+	<?php if ( 'div' != $args['style'] ) : ?>
+		</div>
+	<?php endif; ?>
+	<?php
+}

@@ -1,0 +1,99 @@
+/* Comments */
+
+
+/* Comment form */
+
+.comment-form{
+  margin: 0 0 30px;
+  &__comment{
+    border-radius: 5px;
+    width: 870px;
+    height: 240px;
+    background-color: $comments-form-color-bg;
+    box-shadow: inset 3px 2px 0 $comments-form-color-box-shadow;
+    outline: none;
+    margin: 0 0 30px;
+  }
+  &__author,
+  &__email{
+    border-radius: 5px;
+    width: 470px;
+    padding: 5px;
+    background-color: $comments-form-inputs-color-bg;
+    box-shadow: inset 3px 2px 0 $comments-form-color-box-shadow;
+    outline: none;
+    margin: 0 0 15px;
+  }
+  &__submit{
+    background: $comments-form-submit-color-bg;
+    border-radius: 5px;
+    padding: 15px 70px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    color: $comments-form-submit-color;
+    font-family: open-sans, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px $comments-form-submit-color-box-shadow;
+  }
+}
+
+.comments-list{
+  list-style: none;
+  & .children{
+    list-style: none;
+  }
+  &__author{
+    & .avatar{
+      border-radius: 5px;
+    }
+  }
+  &__author-link,
+  &__commentmetadata,
+  &__reply{
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0 0 10px ;
+  }
+  &__author-link{
+    color: $comments-list-author-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__commentmetadata{
+    & a{
+      color: $comments-list-commentmetadata-color;
+      font-family: open-sans, sans-serif;
+      font-size: 14px;
+    }
+  }
+  &__reply{
+    float: right;
+    & a{
+      color: $comments-list-reply-color;
+      font-family: open-sans, sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      &:before{
+        content: "";
+        font-family: awesome;
+        font-size: 16px;
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+  &__comment-text{
+    margin: -30px 0 0 30px;
+    & p{
+      padding: 15px 10px 20px 50px;
+      color: $comments-list-comment-paragraph-color;
+      font-family: open-sans, sans-serif;
+      font-size: 14px;
+      border-radius: 5px;
+      background: $comments-list-comment-paragraph-color-bg;
+      border-bottom: 2px solid $comments-list-comment-paragraph-color-border;
+    }
+  }
+}

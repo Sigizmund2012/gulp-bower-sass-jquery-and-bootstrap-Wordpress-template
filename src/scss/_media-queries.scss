@@ -61,6 +61,22 @@
       padding: 10px 0 0;
     }
   }
+  /* Comment form */
+
+  .comment-form{
+    &__comment{
+      width: 90%;
+      height: 200px;
+    }
+    &__author,
+    &__email{
+      width: 70%;
+    }
+    &__submit{
+      padding: 15px 70px;
+      font-size: 20px;
+    }
+  }
 }
 // Tablets
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
@@ -118,6 +134,22 @@
     }
     &__day{
       font-size: 24px;
+    }
+  }
+  /* Comment form */
+
+  .comment-form{
+    &__comment{
+      width: 90%;
+      height: 200px;
+    }
+    &__author,
+    &__email{
+      width: 70%;
+    }
+    &__submit{
+      padding: 15px 70px;
+      font-size: 20px;
     }
   }
 }

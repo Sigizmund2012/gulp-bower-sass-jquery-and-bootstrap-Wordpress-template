@@ -41,6 +41,26 @@ $page-heading-color: #7f8c8c;
 $page-content-color-bg: #f3f3f3;
 $page-text-color: #7f8c8c;
 
+// Default category page
+$category-heading-color: #7f8c8c;
+$category-heading-wrapper-color-bg: #ececec;
+
+$category-date-color-bg: #f8f8f8;
+$category-date-border-color: #e5e6e6;
+$category-date-box-shadow-color: #7f8c8c;
+$category-date-text-color: #7f8c8c;
+
+$category-post-image-border-color: #e5e6e6;
+$category-post-image-box-shadow-color: #7f8c8c;
+$category-post-heading-link-color: #75c7bf;
+$category-readmore-link-color: #e1534b;
+$category-navigation-number-color-bg: #8c9898;
+$category-navigation-number-border-color: #7f8c8c;
+$category-navigation-number-hover-color-bg: #e5655d;
+$category-navigation-number-hover-border-color: #e2534b;
+$category-navigation-number-current-color-bg: #649792;
+$category-navigation-number-current-border-color: #528b86;
+
 // Blog category page
 $blog-heading-color: #7f8c8c;
 $blog-heading-wrapper-color-bg: #ececec;
@@ -61,6 +81,27 @@ $blog-navigation-number-hover-border-color: #e2534b;
 $blog-navigation-number-current-color-bg: #649792;
 $blog-navigation-number-current-border-color: #528b86;
 
+// Single post default
+$single-default-category-heading-color: #7f8c8c;
+$single-default-category-heading-wrapper-color-bg: #ececec;
+$single-default-heading-color: #75c7bf;
+$single-default-date-color: #7f8c8c;
+$single-default-author-color: #e1534b;
+
+// Comments
+$comments-form-color-bg: #e5e5e5;
+$comments-form-color-box-shadow: rgba(0, 0, 0, 0.05);
+$comments-form-inputs-color-bg: #e5e5e5;
+$comments-form-inputs-color-box-shadow: rgba(0, 0, 0, 0.05);
+$comments-form-submit-color-bg: #e8645a;
+$comments-form-submit-color: #fff;
+$comments-form-submit-color-box-shadow: #e2534b;
+$comments-list-author-color: #7f8b8b;
+$comments-list-commentmetadata-color: #7f8b8b;
+$comments-list-reply-color: #e1534b;
+$comments-list-comment-paragraph-color: #7f8c8c;
+$comments-list-comment-paragraph-color-bg: #f8f8f8;
+$comments-list-comment-paragraph-color-border: #e5e6e6;
 
 //Bootstrap rewrite variables
 

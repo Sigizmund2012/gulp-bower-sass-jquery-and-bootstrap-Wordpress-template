@@ -1,0 +1,44 @@
+/* Single post default */
+
+.single-default-category-heading{
+  padding: 20px 0;
+  &__title{
+    & a{
+      color: $single-default-category-heading-color;
+      font-family: open-sans, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &_wrapper{
+    background: $single-default-category-heading-wrapper-color-bg;
+  }
+}
+
+.single-default{
+  &__heading{
+    color: $single-default-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__page-text{
+    padding: 20px 0;
+  }
+  &__date{
+    color: $single-default-date-color;
+    font-family: open-sans, sans-serif;
+    font-size: 14px;
+    margin: 0 5px 0 0;
+  }
+  &__autor{
+    color: $single-default-author-color;
+    font-family: open-sans, sans-serif;
+    font-size: 14px;
+    margin: 0 0 0 5px;
+  }
+}
