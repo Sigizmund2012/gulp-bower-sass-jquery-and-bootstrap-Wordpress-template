@@ -1,0 +1,44 @@
+/* Single post portfolio */
+
+.single-portfolio-category-heading{
+  padding: 20px 0;
+  &__title{
+    & a{
+      color: $single-portfolio-category-heading-color;
+      font-family: open-sans, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &_wrapper{
+    background: $single-portfolio-category-heading-wrapper-color-bg;
+  }
+}
+
+.single-portfolio{
+  &__heading{
+    color: $single-portfolio-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__page-text{
+    padding: 20px 0;
+  }
+  &__date{
+    color: $single-portfolio-date-color;
+    font-family: open-sans, sans-serif;
+    font-size: 14px;
+    margin: 0 5px 0 0;
+  }
+  &__autor{
+    color: $single-portfolio-author-color;
+    font-family: open-sans, sans-serif;
+    font-size: 14px;
+    margin: 0 0 0 5px;
+  }
+}
