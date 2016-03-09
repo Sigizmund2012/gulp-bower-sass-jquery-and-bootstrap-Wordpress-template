@@ -77,6 +77,19 @@
       font-size: 20px;
     }
   }
+  /* Category portfolio */
+  .post-portfolio {
+    &__links{
+      margin: 20px 0 0;
+    }
+    &__readmore {
+      margin: 10px 0 10px 5px;
+      float: none;
+      &_link {
+        padding: 15px 20px;
+      }
+    }
+  }
 }
 // Tablets
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
@@ -152,6 +165,13 @@
       font-size: 20px;
     }
   }
+  /* Category portfolio */
+  .post-portfolio {
+    &__readmore {
+      margin: 15px 0 0;
+      float: none;
+    }
+  }
 }
 
 // Notebooks
@@ -178,6 +198,13 @@
         padding: 10px 30px;
         font-size: 14px;
       }
+    }
+  }
+  /* Category portfolio */
+  .post-portfolio {
+    &__readmore {
+      margin: 15px 0 0;
+      float: none;
     }
   }
 }

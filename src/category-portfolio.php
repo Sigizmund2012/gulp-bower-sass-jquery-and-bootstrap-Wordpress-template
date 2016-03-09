@@ -21,21 +21,20 @@
 	<div class="container">
 	<?php while (have_posts()) : the_post(); ?>
 		<div class="row post-portfolio_general">
-			<div class="col-md-2 col-sm-2">
-				<div class="post-portfolio-date">
-					<div class="post-portfolio-date__month"><?php echo get_the_date("F"); ?></div>
-					<div class="post-portfolio-date__day"><?php echo get_the_date("j"); ?></div>
-					<div class="post-portfolio-date__year"><?php echo get_the_date("Y"); ?></div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
+
+			<div class="col-md-6 col-sm-6">
 				<?php the_post_thumbnail('portfolio-thumb', array('class' => 'post-portfolio__image')); ?>
 			</div>
-			<div class="col-md-7 col-sm-7">
+			<div class="col-md-6 col-sm-6">
 				<section class="post-portfolio">
 					<h2 class="post-portfolio__heading"><a class="post-portfolio__heading_link" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-					<div class="post-portfolio_content"><?php the_excerpt (); ?></div>
-					<div class="post-portfolio__readmore"><a class="post-portfolio__readmore_link" href="<?php the_permalink(); ?>">Продолжить чтение</a></div>
+					<div class="post-portfolio__content"><?php the_excerpt (); ?></div>
+					<div class="post-portfolio__links clearfix">
+						<div class="post-portfolio__site-url">
+							<?php echo get_post_meta($post->ID, 'portfolio_site_url', true); ?>
+						</div>
+						<div class="post-portfolio__readmore"><a class="post-portfolio__readmore_link" href="<?php the_permalink(); ?>">Показать детали</a></div>
+					</div>
 				</section>
 			</div>
 		</div>
