@@ -6,6 +6,10 @@ $main-link-color: #fff;
 $current-item-topmenu-bg: #62a29e;
 $current-item-topmenu-box-shadow-color: #528b86;
 // Services
+$services-wrapper-color-bg: #f3f3f3;
+$services-cat-color-bg: #ececec;
+$services-cat-heading-color-bg: #7f8c8c;
+$services-cat-description-color-bg: #777;
 $services-buttons-hover-bg: #e8645a;
 $services-icons-color: #62bdbd;
 $services-icons-hover-color: #e2534b;
@@ -143,9 +147,18 @@ $single-services-author-color: #e1534b;
 // Single post portfolio
 $single-portfolio-category-heading-color: #7f8c8c;
 $single-portfolio-category-heading-wrapper-color-bg: #ececec;
-$single-portfolio-heading-color: #75c7bf;
-$single-portfolio-date-color: #7f8c8c;
-$single-portfolio-author-color: #e1534b;
+$single-portfolio-heading-color: #7f8b8b;
+$single-portfolio-project-image-border-color: #e5e6e6;
+$single-portfolio-project-image-box-shadow-color: #7f8c8c;
+$single-portfolio-project-details-title-color: #7f8c8c;
+$single-portfolio-project-details-borders-bottom-color: #e1e2e2;
+$single-portfolio-project-details-text-color: #777;
+$single-portfolio-project-details-icons-color: #b0b8b8;
+$single-portfolio-project-details-url-color: #e1524b;
+$single-portfolio-page-text-color: #7f8c8c;
+$single-portfolio-recent-project-title-color: #7f8c8c;
+$single-portfolio-recent-project-border-color: #e5e6e6;
+
 
 // Social block
 $social-block-color-bg: #ebebeb;

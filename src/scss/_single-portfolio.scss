@@ -19,26 +19,168 @@
   }
 }
 
+.project-image{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid $single-portfolio-project-image-border-color;
+  box-shadow: 3px 3px 6px $single-portfolio-project-image-box-shadow-color;
+}
+
+.project-details{
+  padding: 20px 0;
+  &__title{
+    color: $single-portfolio-project-details-title-color;
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__year{
+    padding: 15px 0;
+    border-bottom: 1px solid $single-portfolio-project-details-borders-bottom-color;
+    &-title,
+    &-description{
+      color: $single-portfolio-project-details-text-color;
+      font-family: open-sans, sans-serif;
+      font-size: 13px;
+    }
+    &-title{
+      float: left;
+      &:before{
+        content: "";
+        color: $single-portfolio-project-details-icons-color;
+        font-family: awesome;
+        font-size: 16px;
+        margin: 0 10px 0 0;
+      }
+    }
+    &-description{
+      float: right;
+    }
+  }
+  &__tech{
+    padding: 15px 0;
+    border-bottom: 1px solid $single-portfolio-project-details-borders-bottom-color;
+    &-title,
+    &-description{
+      color: $single-portfolio-project-details-text-color;
+      font-family: open-sans, sans-serif;
+      font-size: 13px;
+    }
+    &-title{
+      float: left;
+      &:before{
+        content: "";
+        color: $single-portfolio-project-details-icons-color;
+        font-family: awesome;
+        font-size: 16px;
+        margin: 0 10px 0 0;
+      }
+    }
+    &-description{
+      float: right;
+      text-transform: uppercase;
+    }
+  }
+  &__url{
+    padding: 15px 0;
+    &-title,
+    &-description{
+      font-family: open-sans, sans-serif;
+      font-size: 13px;
+    }
+    &-title{
+      float: left;
+      color: $single-portfolio-project-details-text-color;
+      &:before{
+        content: "";
+        color: $single-portfolio-project-details-icons-color;
+        font-family: awesome;
+        font-size: 16px;
+        margin: 0 10px 0 0;
+      }
+    }
+    &-description{
+      float: right;
+      text-transform: uppercase;
+      & a{
+        color: $single-portfolio-project-details-url-color;
+      }
+    }
+  }
+}
+
 .single-portfolio{
   &__heading{
     color: $single-portfolio-heading-color;
     font-family: open-sans, sans-serif;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
+    margin: 55px 0;
   }
   &__page-text{
     padding: 20px 0;
+    &-title{
+      color: $single-portfolio-page-text-color;
+      font-family: open-sans, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
   }
-  &__date{
-    color: $single-portfolio-date-color;
+}
+
+.recent-projects{
+  margin-bottom: 80px;
+  &__title{
+    color: $single-portfolio-recent-project-title-color;
     font-family: open-sans, sans-serif;
-    font-size: 14px;
-    margin: 0 5px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
-  &__autor{
-    color: $single-portfolio-author-color;
-    font-family: open-sans, sans-serif;
-    font-size: 14px;
-    margin: 0 0 0 5px;
+  &__content{
+    position: relative;
+    overflow: hidden;
+    &:hover .recent-projects__data{
+      transform: translate( 0 );
+      transition: transform 0.5s;
+    }
+  }
+  &__image{
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid $single-portfolio-recent-project-border-color;
+  }
+  &__data{
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate( 0, 100% );
+    background: $main-color;
+    transition: transform 0.5s;
+    &:hover{
+      text-decoration: none;
+    }
+    &-title{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      color: $main-link-color;
+      font-family: open-sans, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      &:before{
+        margin: 0 0 0 -25px;
+        content: "";
+        font-family: awesome;
+        font-size: 25px;
+      }
+    }
   }
 }

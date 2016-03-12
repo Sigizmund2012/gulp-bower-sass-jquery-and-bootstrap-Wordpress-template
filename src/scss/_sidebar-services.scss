@@ -1,24 +1,24 @@
 /* Services */
 
 .services-wrapper{
-  background: #f3f3f3;
+  background: $services-wrapper-color-bg;
   padding: 0 0 50px;
 }
 
 .services-cat{
   border-radius: 5px;
-  background-color: #ececec;
+  background: $services-cat-color-bg;
   padding: 20px;
   margin: 50px 0;
   &__heading{
-    color: #7f8c8c;
+    color: $services-cat-heading-color-bg;
     font-family: open-sans, sans-serif;
     font-size: 30px;
     font-weight: bold;
     margin: 0;
   }
   &__description{
-    color: #777;
+    color: $services-cat-description-color-bg;
     font-family: open-sans, sans-serif;
     font-size: 13px;
   }

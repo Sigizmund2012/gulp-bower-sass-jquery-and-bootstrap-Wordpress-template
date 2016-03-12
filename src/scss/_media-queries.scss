@@ -90,6 +90,19 @@
       }
     }
   }
+
+  /* Portfolio single page */
+  .single-portfolio{
+    &__heading{
+      margin: 30px 0;
+    }
+  }
+  .recent-projects{
+    margin-bottom: 20px;
+    &__content{
+      margin: 0 0 20px;
+    }
+  }
 }
 // Tablets
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
@@ -170,6 +183,18 @@
     &__readmore {
       margin: 15px 0 0;
       float: none;
+    }
+  }
+  /* Portfolio single page */
+  .single-portfolio{
+    &__heading{
+      margin: 30px 0;
+    }
+  }
+  .recent-projects{
+    margin-bottom: 20px;
+    &__content{
+      margin: 0 0 20px;
     }
   }
 }

@@ -47,6 +47,10 @@ module.exports = {
       src: src + 'scss/img/**/*',
       dest: build + 'img/'
     },
+	  screen: {
+		  src: src + '*.png',
+		  dest: build
+	  },
     dist: {
       src: [dist+'**/*(*.png|*.jpg|*.jpeg|*.gif)', '!'+dist+'screenshot.png'], 
       imagemin: {

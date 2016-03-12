@@ -27,7 +27,7 @@ function voidx_setup() {
   // Должен быть установлен единожды; Ничего с ним не делайте, это часть ядра WordPress
   global $content_width;
   if ( !isset( $content_width ) || !is_int( $content_width ) )
-    $content_width = (int) 960;
+    $content_width = (int) 1170;
 }
 
 add_action( 'after_setup_theme', 'voidx_setup', 11 );
@@ -52,6 +52,8 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_image_size( 'footer-blog-thumb', 70, 70 ); // для вывода в футере записей из блога
 	add_image_size( 'blog-thumb', 300, 200 ); // для вывода записей из блога
 	add_image_size( 'category-thumb', 300, 200 ); // для вывода записей из дефолтной рубрики
+	add_image_size( 'portfolio-category-thumb', 1170, 700 ); // для вывода записей из рубрики "Портфолио"
+	add_image_size( 'portfolio-recent-project', 400, 300 ); // для вывода последних проектов из рубрики "Портфолио"
 }
 
 // Размер предисловия записи на странице рубрики
