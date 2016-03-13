@@ -21,14 +21,7 @@
 	<div class="container">
 	<?php while (have_posts()) : the_post(); ?>
 		<div class="row post-services_general">
-			<div class="col-md-2 col-sm-2">
-				<div class="post-services-date">
-					<div class="post-services-date__month"><?php echo get_the_date("F"); ?></div>
-					<div class="post-services-date__day"><?php echo get_the_date("j"); ?></div>
-					<div class="post-services-date__year"><?php echo get_the_date("Y"); ?></div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
+			<div class="col-md-5 col-sm-5">
 				<?php the_post_thumbnail('services-thumb', array('class' => 'post-services__image')); ?>
 			</div>
 			<div class="col-md-7 col-sm-7">
