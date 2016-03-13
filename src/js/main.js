@@ -10,14 +10,17 @@ jQuery(document).ready(function($) {
 	( function( $ ){
 		/* Margin to portfolio recent projects description */
 		var projectsArr = $( '.recent-projects__data-title' );
-		$.each( projectsArr, function(){
-			var halfWidth = $( this ).width() / 2;
-			var halfHeight = $( this ).height() / 2;
-			$( this ).css( {
-				'margin-top': '-' + halfHeight + 'px',
-				'margin-left': '-' + halfWidth + 'px'
+		if( projectsArr.length ){
+			$.each( projectsArr, function(){
+				var halfWidth = $( this ).width() / 2;
+				var halfHeight = $( this ).height() / 2;
+				$( this ).css( {
+					'margin-top': '-' + halfHeight + 'px',
+					'margin-left': '-' + halfWidth + 'px'
+				} );
 			} );
-		} );
+		}
+
 	} )( $ );
 
 	/* Sticky footer */

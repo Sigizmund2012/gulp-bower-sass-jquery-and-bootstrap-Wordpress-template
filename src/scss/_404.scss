@@ -1,0 +1,10 @@
+/* 404 page */
+
+.not-found{
+  &__title{
+    color: $not-found-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

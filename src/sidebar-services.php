@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<?php
-				$category_services = get_category(194); // My services category
+				$category_services = get_category( 6 ); // My services category
 				$url = home_url();
 				?>
 				<div class="col-xs-12">
@@ -27,7 +27,7 @@
 				<?php
 				$args = array(
 					'posts_per_page' => 4,
-					'category' => 194 // My services category
+					'category' => 6 // My services category
 				);
 				$myposts = get_posts($args);
 				$i = 0;

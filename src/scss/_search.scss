@@ -1,0 +1,32 @@
+/* Search page */
+
+.search{
+  &__heading{
+    color: $search-heading-color;
+    font-family: open-sans, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__results{
+    &-heading {
+      color: $search-heading-color;
+      font-family: open-sans, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    &-post{
+      &-title{
+        font-family: open-sans, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        & a{
+          color: $search-heading-color;
+        }
+      }
+    }
+  }
+  &__sorry{
+    padding: 20px 0;
+    font-size: 18px;
+  }
+}

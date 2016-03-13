@@ -1,0 +1,37 @@
+/* Styles, not included to any template chunks */
+
+.posts-from-categories{
+  &__heading{
+    color: $list-posts-color;
+    font-family: open-sans, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__list{
+    list-style: none;
+    padding: 0 20px;
+    &-item{
+      & a{
+        color: $list-posts-color;
+      }
+    }
+  }
+}
+
+.list-pages{
+  &__heading{
+    color: $list-posts-color;
+    font-family: open-sans, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__list{
+    list-style: none;
+    padding: 0 20px;
+    & .page_item{
+      & a{
+        color: $list-posts-color;
+      }
+    }
+  }
+}

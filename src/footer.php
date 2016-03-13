@@ -52,7 +52,7 @@
 							<?php
 							$blog_args = array(
 								'posts_per_page' => 2,
-								'category' => 193 // My blog category
+								'category' => 3 // My blog category
 							);
 							$blog_posts = get_posts($blog_args);
 							?>

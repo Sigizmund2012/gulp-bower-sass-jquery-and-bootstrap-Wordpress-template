@@ -26,7 +26,6 @@
 							<h1 class="single-services__heading">
 								<?php the_title(); ?>
 							</h1>
-							<span class="single-services__date"><?php the_date( 'j F Y,' ); ?> </span>Автор:<span class="single-services__autor"><?php the_author(); ?></span>
 							<div class="single-services__page-text">
 								<?php the_content(); ?>
 							</div>
