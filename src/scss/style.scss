@@ -15,16 +15,9 @@ Version: 1.0.0
 !*/
 
 // Open Sans
-@include font-face(open-sans, light, 200)
-@include font-face(open-sans, light-italic, 200, italic)
 @include font-face(open-sans, regular) // 400
 @include font-face(open-sans, regular, normal, italic) // 400
-@include font-face(open-sans, semibold, 600)
-@include font-face(open-sans, semibold-italic, 600, italic)
 @include font-face(open-sans, bold, bold) // 700
-@include font-face(open-sans, bold-italic, bold, italic) // 700
-@include font-face(open-sans, extrabold, 800)
-@include font-face(open-sans, extrabold-italic, 800, italic)
 
 // Awesome
 @include font-face(awesome, fontawesome-webfont)
