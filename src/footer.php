@@ -9,9 +9,7 @@
 							<span class="information__freelancer">freelancer</span>
 						</div>
 						<div class="information__text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate ea enim esse eum
-							harum illo nam necessitatibus nulla officia porro, quam quasi reiciendis reprehenderit vero.
-							Esse magnam quia tenetur.
+							Блог и портфолио фрилансера Smartfreelancer aka Sergey Segeda. Занимаюсь профессиональной вёрсткой сайтов и программированием интерфейсов, также интересуюсь js фреймворками и Node.js. Добро пожаловать!
 						</div>
 						<div class="information__email">
 							<span class="information__email-text">e-mail:</span><span class="information__email-link">segeda823@mail.ru</span>
