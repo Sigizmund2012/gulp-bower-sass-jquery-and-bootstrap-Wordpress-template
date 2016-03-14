@@ -36,6 +36,7 @@
   }
   &__list{
     list-style-image: url("img/advantages-list-bullet.png");
+    padding: 0 0 0 20px;
     &-item{
       color: $advantages-text-color;
       font-family: open-sans, sans-serif;
