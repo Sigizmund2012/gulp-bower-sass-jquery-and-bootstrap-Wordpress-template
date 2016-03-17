@@ -1,6 +1,8 @@
 # ШАБЛОН SMARTFREELANCER
 
-Сделано на основе https://github.com/synapticism/wordpress-gulp-bower-sass Добавлены jQuery и Bootstrap, удалены Composer, Scut, wp-ajax reload и HTML5 history api. 
+Сделано на основе https://github.com/synapticism/wordpress-gulp-bower-sass Добавлены jQuery и Bootstrap, удалены Composer, Scut, wp-ajax reload и HTML5 history api.
+
+Изначально это был стартовый набор для разработки тем Wordpress, но позже я сверстал на его основе шаблон, который и выкладываю в общий доступ, вы можете использовать его по своему усмотрению. Вы можете увидеть работающий шаблон на сайте http://smartfreelancer.ru/
 
 Разработка темы WordPress обычным способом отнимает много времени и подвержена ошибкам. Автоматизация процесса сборки позволяет интегрировать лучшие практики, экономя время. Этот проект представляет собой комплект * стартер * для разработки высокооптимизированных тем WordPress с Gulp, Bower, Sass, jQuery и Bootstrap.
 
