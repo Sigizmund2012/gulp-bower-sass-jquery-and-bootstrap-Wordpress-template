@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
 			setInterval( function animateSearch(){
 				if ( ! search.hasClass( 'animated flip' ) && ! logo.hasClass( 'animated swing' ) ) {
 					search.addClass( 'animated flip' );
-					logo.addClass( 'animated swing' )
+					logo.addClass( 'animated swing' );
 				}
 				else {
 					search.removeClass( 'animated flip' );
