@@ -19,10 +19,11 @@ function voidx_setup() {
   // Добавляем основной файл стилей в <head>
   if( ! is_admin() and ! is_login_page() ){
     wp_enqueue_style( 'main-style', get_stylesheet_uri() );
-  }
-  // Подключаем основной файл скриптов в <head>
+
+  // Подключаем основной файл скриптов перед </body>
   wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', array(), false, true );
 
+  }
   // $content_width ограничивает максимальную ширину изображений, загружаемых через визуальный редактор
   // Должен быть установлен единожды; Ничего с ним не делайте, это часть ядра WordPress
   global $content_width;
