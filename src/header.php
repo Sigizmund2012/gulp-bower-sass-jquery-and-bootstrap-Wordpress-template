@@ -7,9 +7,11 @@
 	<title><?php wp_title('-', true, 'right'); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11"/>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<?php wp_head(); ?>
 </head>
 <body>
+<!--noindex-->
 <header class="container-fluid header_general">
 	<div class="row">
 		<div class="container">
@@ -43,3 +45,4 @@
 		</div>
 	</div>
 </header>
+<!--/noindex-->

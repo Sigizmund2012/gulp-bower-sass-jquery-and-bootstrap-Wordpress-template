@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
 			};
 		};
 		var currentDate = new Date();
-		var fullYear = new Date().getFullYear() - 1981;
+		var fullYear = ( new Date().getFullYear() - 1981 ) - 1;
 		var countMonth = 11 - ( 10 - currentDate.getMonth() );
 		currentDate.setFullYear( fullYear , countMonth );
 		var year = currentDate.getFullYear();

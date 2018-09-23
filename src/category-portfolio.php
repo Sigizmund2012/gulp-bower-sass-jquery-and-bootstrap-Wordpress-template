@@ -30,9 +30,6 @@
 					<h2 class="post-portfolio__heading"><a class="post-portfolio__heading_link" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 					<div class="post-portfolio__content"><?php the_excerpt (); ?></div>
 					<div class="post-portfolio__links clearfix">
-						<div class="post-portfolio__site-url">
-							<?php echo get_post_meta($post->ID, 'portfolio_site_url', true); ?>
-						</div>
 						<div class="post-portfolio__readmore"><a class="post-portfolio__readmore_link" href="<?php the_permalink(); ?>">Показать детали</a></div>
 					</div>
 				</section>
