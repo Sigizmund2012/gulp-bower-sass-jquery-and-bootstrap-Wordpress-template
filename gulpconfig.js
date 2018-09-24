@@ -35,7 +35,7 @@ module.exports = {
     open: true, // Поставьте false если вы не хотите, чтобы окно браузера открывалось автоматически
     port: 3000, // Номер порта для live версии сайта; default: 3000
     proxy: "smartfreelancer.loc", // Использование прокси-сервера, а не встроенного сервера, чтобы сделать рендеринг с помощью WordPress
-    browser: "google chrome",
+    browser: "firefox",
     watchOptions: {
       debounceDelay: 2000 // Задержка для событий, вызываемых подряд для того же файла / события
     }
